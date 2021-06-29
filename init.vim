@@ -2,11 +2,11 @@
 " -      SOURCING        -   
 " ------------------------
 
- source $HOME/Documents/Github/Je12emy/DOTfiles/nvim/config/general.vim
- source $HOME/Documents/Github/Je12emy/DOTfiles/nvim/plugins/plugins.vim
- source $HOME/Documents/Github/Je12emy/DOTfiles/nvim/keys/mappings.vim
- source $HOME/Documents/Github/Je12emy/DOTfiles/nvim/keys/which-key.vim
- luafile $HOME/Documents/Github/Je12emy/DOTfiles/nvim/lua/init.lua
+source $HOME/.config/nvim/config/general.vim
+source $HOME/.config/nvim/plugins/plugins.vim
+source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/keys/which-key.vim
+luafile $HOME/.config/nvim/lua/init.lua
 
  
 " ------------------------

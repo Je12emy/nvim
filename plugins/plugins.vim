@@ -26,6 +26,7 @@ Plug 'airblade/vim-rooter'
 " Git 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'nvim-lua/plenary.nvim'
 " Code Utils
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
@@ -41,6 +42,10 @@ Plug 'voldikss/vim-floaterm'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'glepnir/lspsaga.nvim'
+" React, Node, Typescript Development
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 " Status Line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

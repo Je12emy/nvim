@@ -30,6 +30,18 @@ nmap <leader>cc<space> <Plug>NERDCommenterToggle
 nmap <leader>ccm <Plug>NERDCommenterMinimal
 nmap <leader>ccs <Plug>NERDCommenterSexy
 
+nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
+nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+nnoremap <silent>K :Lspsaga hover_doc<CR>
+nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+nnoremap <silent>cr <cmd>lua require('lspsaga.rename').rename()<CR>
+nnoremap <silent>cr :Lspsaga rename<CR>
+nnoremap <silent> gd :Lspsaga preview_definition<CR>
+nnoremap <silent> gs :Lspsaga signature_help<CR>
+
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -72,7 +84,7 @@ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " LSP
-nnoremap <silent> K <cmd>lua vim.lsp.buf.sigature_help()<CR>
+"nnoremap <silent> K <cmd>lua vim.lsp.buf.sigature_help()<CR>
 nnoremap <leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>
 
 " Floaterm
