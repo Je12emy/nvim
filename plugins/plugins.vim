@@ -31,9 +31,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
-Plug 'ap/vim-css-color'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 Plug 'nvim-treesitter/playground'
 " Terminal
@@ -41,10 +39,8 @@ Plug 'voldikss/vim-floaterm'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
-Plug 'ray-x/lsp_signature.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'glepnir/lspsaga.nvim'
-" React, Node, Typescript Development
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 " Status Line
 Plug 'hoob3rt/lualine.nvim'
