@@ -47,8 +47,7 @@ Plug 'glepnir/lspsaga.nvim'
 " React, Node, Typescript Development
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 " Status Line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'hoob3rt/lualine.nvim'
 " Theme
 Plug 'mhinz/vim-startify'
 Plug 'ayu-theme/ayu-vim'
