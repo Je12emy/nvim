@@ -82,17 +82,3 @@ let g:compe.source.nvim_lua = v:true
 let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 
-
-lua << EOF
-
-local lsp_signature = require'lsp_signature'
-
-require'lspconfig'.tsserver.setup{
-  on_attach = function()
-    lsp_signature.on_attach()
-  end
-}
-
-EOF
-
-

@@ -6,16 +6,16 @@
 " Replace command
 nnoremap S :%s//g<Left><Left>
 
-"" Navigation Keymaps
-nnoremap <leader>wh :wincmd h<CR>
-nnoremap <leader>wj :wincmd j<CR>
-nnoremap <leader>wk :wincmd k<CR>
-nnoremap <leader>wl :wincmd l<CR>
+" Navigation Keymaps
+nnoremap <c-h> :wincmd h<CR>
+nnoremap <c-j> :wincmd j<CR>
+nnoremap <c-k> :wincmd k<CR>
+nnoremap <c-l> :wincmd l<CR>
 nnoremap <leader>wt :wincmd T<CR>
 
-"" Window Split
-nnoremap <leader>wv <C-w>v
-nnoremap <leader>ws <C-w>s
+" Window Split
+nnoremap <c-v> <C-w>v
+nnoremap <c-s> <C-w>s
 nnoremap <silent> <Leader>w+ :exe "vertical resize +" . 5<CR> 
 nnoremap <silent> <Leader>w- :exe "vertical resize -" . 5<CR>
 
@@ -25,7 +25,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-"" Comment Code
+" Comment Code
 nmap <leader>cc<space> <Plug>NERDCommenterToggle
 nmap <leader>ccm <Plug>NERDCommenterMinimal
 nmap <leader>ccs <Plug>NERDCommenterSexy
@@ -56,8 +56,8 @@ inoremap <A-k> <Esc>:m+<CR>
 
 " Tab Manipulation Keymaps
 nnoremap <leader>ts :tab split<CR>
-nnoremap <leader>tn :BufferNext<CR>
-nnoremap <leader>tp :BufferPrevious<CR>
+nnoremap <c-]> :BufferNext<CR>
+nnoremap <c-[> :BufferPrevious<CR>
 nnoremap <silent>    <A-c> :BufferClose<CR>
 nnoremap <silent> <A-1> :BufferGoto 1<CR>
 nnoremap <silent> <A-2> :BufferGoto 2<CR>
