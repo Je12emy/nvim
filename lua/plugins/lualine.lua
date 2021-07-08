@@ -1,5 +1,5 @@
 local options = {
-      theme = 'ayu_mirage',
+      theme = 'onedark',
       component_separators = {'', ''},
       section_separators = {'', ''},
 }

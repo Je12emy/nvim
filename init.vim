@@ -13,9 +13,7 @@ luafile $HOME/.config/nvim/lua/init.lua
 " -       THEME          -   
 " ------------------------
 
-let ayucolor="mirage"  
-colorscheme ayu
-let g:airline_theme="ayu_mirage"
+colorscheme onedark
 
 " ------------------------
 " -      CONFIG          -   

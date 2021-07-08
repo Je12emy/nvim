@@ -46,7 +46,7 @@ Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'hoob3rt/lualine.nvim'
 " Theme
 Plug 'mhinz/vim-startify'
-Plug 'ayu-theme/ayu-vim'
+Plug 'joshdick/onedark.vim'
 " Wiki
 Plug 'vimwiki/vimwiki'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }

@@ -56,8 +56,8 @@ inoremap <A-k> <Esc>:m+<CR>
 
 " Tab Manipulation Keymaps
 nnoremap <leader>ts :tab split<CR>
-nnoremap <c-]> :BufferNext<CR>
-nnoremap <c-[> :BufferPrevious<CR>
+nnoremap <a-.> :BufferNext<CR>
+nnoremap <a-,> :BufferPrevious<CR>
 nnoremap <silent>    <A-c> :BufferClose<CR>
 nnoremap <silent> <A-1> :BufferGoto 1<CR>
 nnoremap <silent> <A-2> :BufferGoto 2<CR>
