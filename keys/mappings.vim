@@ -94,3 +94,4 @@ tnoremap <silent> <F21> <C-\><C-n>:FloatermKill<CR>
 tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
 tnoremap <silent> <F11> <C-\><C-n>:FloatermNext<CR>
 tnoremap <silent> <F10> <C-\><C-n>:FloatermPrev<CR>
+tnoremap <silent> <c-n> <C-\><C-n><CR>

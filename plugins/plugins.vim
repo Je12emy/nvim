@@ -34,6 +34,7 @@ Plug 'folke/which-key.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 Plug 'nvim-treesitter/playground'
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 " Terminal
 Plug 'voldikss/vim-floaterm'
 " LSP
