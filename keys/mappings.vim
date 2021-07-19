@@ -95,3 +95,6 @@ tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
 tnoremap <silent> <F11> <C-\><C-n>:FloatermNext<CR>
 tnoremap <silent> <F10> <C-\><C-n>:FloatermPrev<CR>
 tnoremap <silent> <c-n> <C-\><C-n><CR>
+
+" Preview Markdown File
+nnoremap <leader>wp <cmd>:MarkdownPreview<CR>

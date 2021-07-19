@@ -50,6 +50,8 @@ Plug 'mhinz/vim-startify'
 Plug 'joshdick/onedark.vim'
 " Wiki
 Plug 'vimwiki/vimwiki'
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Latex
+Plug 'lervag/vimtex'
 
 call plug#end()
