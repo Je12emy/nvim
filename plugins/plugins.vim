@@ -35,6 +35,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 Plug 'nvim-treesitter/playground'
 Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'ap/vim-css-color'
 " Terminal
 Plug 'voldikss/vim-floaterm'
 " LSP
@@ -46,6 +47,7 @@ Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 " Status Line
 Plug 'hoob3rt/lualine.nvim'
 " Theme
+Plug 'EdenEast/nightfox.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'joshdick/onedark.vim'
 " Wiki

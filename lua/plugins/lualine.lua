@@ -1,5 +1,5 @@
 local options = {
-      theme = 'onedark',
+      theme = 'nightfox',
       component_separators = {'', ''},
       section_separators = {'', ''},
 }
