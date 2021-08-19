@@ -20,11 +20,12 @@ vim.api.nvim_set_keymap( 'n',   '<s-l>', ':exe --vertical resize +-- .5<CR>', {n
 -- vim.api.nvim_set_keymap( 'n',   '<s-k>', ':exe --resize +-- .5<CR>', {noremap = true})
 
 -- Telescope
-vim.api.nvim_set_keymap( 'n',   '<leader>ff', '<cmd>Telescope find_files<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fb', '<cmd>Telescope buffers<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fc', '<cmd>Telescope git_commits<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fr', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fh', '<cmd>Telescope help_tags<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>fc', ':Telescope git_commits<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>fr', ':Telescope git_branches<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
 
 -- Nerd Tree
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
@@ -56,7 +57,7 @@ vim.api.nvim_set_keymap( 'n',   '<a-9>', ':BufferLast<CR>', {noremap = true, sil
 
 -- Autocompletition
 vim.api.nvim_set_keymap( 'i',   '<C-space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
-vim.api.nvim_set_keymap( 'i',   '<CR>', 'compe#confirm()', {noremap = true, silent = true, expr = true})
+--vim.api.nvim_set_keymap( 'i',   '<CR>', 'compe#confirm()', {noremap = true, silent = true, expr = true})
 
 -- Floaterm
 vim.api.nvim_set_keymap( 'n',   '<F12>', ':FloatermToggle<CR>', {noremap = true, silent = true})

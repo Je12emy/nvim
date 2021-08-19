@@ -36,6 +36,7 @@ require "paq" {
     "EdenEast/nightfox.nvim";
     "mhinz/vim-startify";
     -- Utils
+    "AckslD/nvim-neoclip.lua";
     "tpope/vim-surround";
     "preservim/nerdcommenter";
     "folke/which-key.nvim";
@@ -83,6 +84,7 @@ require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 -- ------------------------
 
 require('config/lualine')
+require('config/neoclip')
 require('config/nvim-compe')
 require('config/telescope')
 require('config/which-key')
