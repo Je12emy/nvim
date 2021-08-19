@@ -77,3 +77,12 @@ vim.g['vimwiki_list'] = {{path = '~/Nextcloud/Notes', syntax = 'markdown', ext =
 
 --Treesitter
 require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
+-- ------------------------
+-- -   Plug Configs       -   
+-- ------------------------
+
+require('config/lualine')
+require('config/nvim-compe')
+require('config/telescope')
+require('config/which-key')
