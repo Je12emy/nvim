@@ -23,6 +23,7 @@ vim.api.nvim_set_keymap( 'n',   '<s-l>', ':exe --vertical resize +-- .5<CR>', {n
 vim.api.nvim_set_keymap( 'n',   '<leader>ff', '<cmd>Telescope find_files<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<leader>fb', '<cmd>Telescope buffers<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<leader>fc', '<cmd>Telescope git_commits<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>fr', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<leader>fh', '<cmd>Telescope help_tags<CR>', {noremap = true, silent = true})
 
 -- Nerd Tree
