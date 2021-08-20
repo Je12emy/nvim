@@ -12,12 +12,13 @@ vim.api.nvim_set_keymap( 'n',   '<c-k>', ':wincmd k<CR>', {noremap = true, silen
 vim.api.nvim_set_keymap( 'n',   '<c-l>', ':wincmd l<CR>', {noremap = true, silent = true})
 
 -- Window Split Manipulation
-vim.api.nvim_set_keymap( 'n',   '<c-v>', '<C-w>v<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<c-s>', '<C-w>s<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<s-h>', ':exe --vertical resize --- .5<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<s-l>', ':exe --vertical resize +-- .5<CR>', {noremap = true, silent = true})
--- vim.api.nvim_set_keymap( 'n',   '<s-j>', ':exe --resize --- .5<CR>', {noremap = true})
--- vim.api.nvim_set_keymap( 'n',   '<s-k>', ':exe --resize +-- .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>wv', '<C-w>v<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>ws', '<C-w>s<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>wh', ':exe "vertical resize -" .5<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>wl', ':exe "vertical resize +" .5<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>wj', ':exe "resize -" .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>wk', ':exe "resize +" .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<leader>wr', '<C-w>=', {noremap = true})
 
 -- Telescope
 vim.api.nvim_set_keymap( 'n',   '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
