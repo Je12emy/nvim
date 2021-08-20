@@ -18,7 +18,7 @@ require "paq" {
     "savq/paq-nvim";                  -- Let Paq manage itself
     -- NERDTree
     "preservim/nerdtree";
-    "ryanoasis/vim-devicons";
+    "kyazdani42/nvim-web-devicons";
     "Xuyuanp/nerdtree-git-plugin";
     "tiagofumo/vim-nerdtree-syntax-highlight";
     "airblade/vim-rooter";
