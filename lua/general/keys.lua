@@ -3,34 +3,34 @@
 -- ------------------------
 
 -- Replace command
-vim.api.nvim_set_keymap( 'n',   'S', ':%s//g<Left><Left>', {noremap = true})
+--vim.api.nvim_set_keymap( 'n',   'S', ':%s//g<Left><Left>', {noremap = true})
 
--- Navigation Keymaps
+---- Navigation Keymaps
 vim.api.nvim_set_keymap( 'n',   '<c-h>', ':wincmd h<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<c-j>', ':wincmd j<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<c-k>', ':wincmd k<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<c-l>', ':wincmd l<CR>', {noremap = true, silent = true})
 
 -- Window Split Manipulation
-vim.api.nvim_set_keymap( 'n',   '<leader>wv', '<C-w>v<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>ws', '<C-w>s<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>wh', ':exe "vertical resize -" .5<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>wl', ':exe "vertical resize +" .5<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>wj', ':exe "resize -" .5<CR>', {noremap = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>wk', ':exe "resize +" .5<CR>', {noremap = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>wr', '<C-w>=', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>wv', '<C-w>v<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>ws', '<C-w>s<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>wh', ':exe "vertical resize -" .5<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>wl', ':exe "vertical resize +" .5<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>wj', ':exe "resize -" .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>wk', ':exe "resize +" .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>wr', '<C-w>=', {noremap = true})
 
 -- Telescope
-vim.api.nvim_set_keymap( 'n',   '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fc', ':Telescope git_commits<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fr', ':Telescope git_branches<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>fc', ':Telescope git_commits<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>fr', ':Telescope git_branches<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
 
 -- Nerd Tree
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
 
 -- LSP
 vim.api.nvim_set_keymap( 'n',   'gd', '<cmd> vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
@@ -70,4 +70,4 @@ vim.api.nvim_set_keymap( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>', {norema
 vim.api.nvim_set_keymap( 't',   'jk', '<C-\\><C-n><CR>', {noremap = true, silent = true})
 
 -- Latex
-vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {noremap = true})
+--vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {noremap = true})
