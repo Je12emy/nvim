@@ -74,7 +74,16 @@ vim.g['webdevicons_enable_airline_statusline'] = 1
 vim.g['NERDTreeIgnore'] = {'^node_modules$'}
 
 --VimWiki
-vim.g['vimwiki_list'] = {{path = '~/Nextcloud/Notes', syntax = 'markdown', ext = '.md'}}
+function getWikiPath()
+    if os.getenv('os') == 'Windows_NT'
+        then
+            return 'D:/Nextcloud/Notes'
+        else 
+            return '~/Nextcloud/Notes'
+    end
+end
+
+vim.g['vimwiki_list'] = {{path = getWikiPath(), syntax = 'markdown', ext = '.md'}}
 
 --Treesitter
 require'nvim-treesitter.configs'.setup { highlight = { enable = true } }

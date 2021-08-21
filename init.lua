@@ -74,3 +74,5 @@ vim.api.nvim_set_keymap( 't',   '<F11>', '<C-\\><C-n>:FloatermNext<CR>', {norema
 vim.api.nvim_set_keymap( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 't',   'jk', '<C-\\><C-n><CR>', {noremap = true, silent = true})
 
+
+vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {noremap = true})
