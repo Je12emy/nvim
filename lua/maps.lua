@@ -44,6 +44,9 @@ vim.api.nvim_set_keymap( 'n',   '<Space>fc', ':Telescope git_commits<CR>', {nore
 vim.api.nvim_set_keymap( 'n',   '<Space>fr', ':Telescope git_branches<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fo', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fm', ':Telescope marks<CR>', {noremap = true, silent = true})
+
 
 -- Tab Manipulation Keymaps
 vim.api.nvim_set_keymap( 'n',   '<a-.>', ':BufferNext<CR>', {noremap = true, silent = true})

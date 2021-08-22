@@ -34,7 +34,7 @@ require "paq" {
     "hoob3rt/lualine.nvim";
     -- Theme
     "EdenEast/nightfox.nvim";
-    "mhinz/vim-startify";
+    "glepnir/dashboard-nvim";
     -- Utils
     "AckslD/nvim-neoclip.lua";
     "tpope/vim-surround";
@@ -97,3 +97,4 @@ require('config/neoclip')
 require('config/nvim-compe')
 require('config/telescope')
 require('config/which-key')
+require('config/dashboard-nvim')
