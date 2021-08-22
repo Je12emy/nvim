@@ -23,6 +23,8 @@ set.hlsearch = true
 set.timeoutlen = 1000
 set.cursorline = true
 set.spelllang = {'en','es'}
+-- ------------------------
+-- -       THEME          -   
+-- ------------------------
 
-vim.api.nvim_set_keymap( 'i',   'jk', '<Esc>', {noremap = true})
-vim.api.nvim_set_keymap( 'n',   '<Space>', '<Nop>', {noremap = true})
+require('nightfox').set()

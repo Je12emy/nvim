@@ -1,9 +1,12 @@
+print('Maps')
 -- ------------------------
 -- -      Keymaps         -   
 -- ------------------------
 
--- Replace command
---vim.api.nvim_set_keymap( 'n',   'S', ':%s//g<Left><Left>', {noremap = true})
+-- General
+vim.api.nvim_set_keymap( 'i',   'jk', '<Esc>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>', '<Nop>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   'S', ':%s//g<Left><Left>', {noremap = true})
 
 ---- Navigation Keymaps
 vim.api.nvim_set_keymap( 'n',   '<c-h>', ':wincmd h<CR>', {noremap = true, silent = true})
@@ -13,20 +16,12 @@ vim.api.nvim_set_keymap( 'n',   '<c-l>', ':wincmd l<CR>', {noremap = true, silen
 
 -- Window Split Manipulation
 vim.api.nvim_set_keymap( 'n',   '<Space>wv', '<C-w>v<CR>', {noremap = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>ws', '<C-w>s<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>wh', ':exe "vertical resize -" .5<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>wl', ':exe "vertical resize +" .5<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>wj', ':exe "resize -" .5<CR>', {noremap = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>wk', ':exe "resize +" .5<CR>', {noremap = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>wr', '<C-w>=', {noremap = true})
-
--- Telescope
-vim.api.nvim_set_keymap( 'n',   '<Leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>fc', ':Telescope git_commits<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>fr', ':Telescope git_branches<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>ws', '<C-w>s<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>wh', ':exe "vertical resize -" .5<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>wl', ':exe "vertical resize +" .5<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>wj', ':exe "resize -" .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>wk', ':exe "resize +" .5<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=', {noremap = true})
 
 -- Nerd Tree
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
@@ -41,6 +36,14 @@ vim.api.nvim_set_keymap( 'n',   'gs', '<cmd> vim.lsp.buf.signature_help()<CR>', 
 vim.api.nvim_set_keymap( 'n',   '<C-n>', '<cmd> vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd> vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   'ca', '<cmd> vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
+
+-- Telescope
+vim.api.nvim_set_keymap( 'n',   '<Space>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fc', ':Telescope git_commits<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fr', ':Telescope git_branches<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
 
 -- Tab Manipulation Keymaps
 vim.api.nvim_set_keymap( 'n',   '<a-.>', ':BufferNext<CR>', {noremap = true, silent = true})
