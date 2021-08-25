@@ -1,4 +1,3 @@
-print('Maps')
 -- ------------------------
 -- -      Keymaps         -   
 -- ------------------------
@@ -28,14 +27,14 @@ vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NERDTreeToggle<CR>', {noremap = true,
 vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
 
 -- LSP
-vim.api.nvim_set_keymap( 'n',   'gd', '<cmd> vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   'gr', '<cmd> vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   'gi', '<cmd> vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   'K', '<cmd> vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   'gs', '<cmd> vim.lsp.buf.signature_help()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<C-n>', '<cmd> vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd> vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   'ca', '<cmd> vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<C-n>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
 
 -- Telescope
 vim.api.nvim_set_keymap( 'n',   '<Space>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
@@ -76,4 +75,8 @@ vim.api.nvim_set_keymap( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>', {norema
 vim.api.nvim_set_keymap( 't',   'jk', '<C-\\><C-n><CR>', {noremap = true, silent = true})
 
 -- Latex
---vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {noremap = true})
+vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {noremap = true})
+
+vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>co", ":TSLspOrganize<CR>", {silent = true})
+vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cR", ":TSLspRenameFile<CR>", {silent = true})
+vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSLspImportAll<CR>", {silent = true})
