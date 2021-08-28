@@ -45,6 +45,7 @@ vim.api.nvim_set_keymap( 'n',   '<Space>fh', ':Telescope help_tags<CR>', {norema
 vim.api.nvim_set_keymap( 'n',   '<Space>fy', ':Telescope neoclip<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fo', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fm', ':Telescope marks<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fs', ':Telescope spell_suggest<CR>', {noremap = true, silent = true})
 
 
 -- Tab Manipulation Keymaps
