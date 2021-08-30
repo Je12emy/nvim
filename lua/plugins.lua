@@ -65,15 +65,6 @@ require "paq" {
 -- -     Settings         -   
 -- ------------------------
 
- --Startify
-vim.g['webdevicons_enable'] = 1
-vim.g['webdevicons_enable_startify'] = 1
-vim.g['webdevicons_enable_airline_tabline'] = 1
-vim.g['webdevicons_enable_airline_statusline'] = 1
-
- --NERDTree
-vim.g['NERDTreeIgnore'] = {'^node_modules$'}
-
 --VimWiki
 function getWikiPath()
     if os.getenv('os') == 'Windows_NT'
