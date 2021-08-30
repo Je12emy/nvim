@@ -22,7 +22,7 @@ vim.api.nvim_set_keymap( 'n',   '<Space>wj', ':exe "resize -" .5<CR>', {noremap 
 vim.api.nvim_set_keymap( 'n',   '<Space>wk', ':exe "resize +" .5<CR>', {noremap = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=', {noremap = true})
 
--- Nerd Tree
+-- Nvim Tree
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NvimTreeFocus<CR>', {noremap = true, silent = true})
 
