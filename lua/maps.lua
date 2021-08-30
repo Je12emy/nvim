@@ -23,8 +23,8 @@ vim.api.nvim_set_keymap( 'n',   '<Space>wk', ':exe "resize +" .5<CR>', {noremap 
 vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=', {noremap = true})
 
 -- Nerd Tree
-vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NERDTreeToggle<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NERDTreeFocus<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NvimTreeFocus<CR>', {noremap = true, silent = true})
 
 -- LSP
 vim.api.nvim_set_keymap( 'n',   'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
@@ -46,6 +46,7 @@ vim.api.nvim_set_keymap( 'n',   '<Space>fy', ':Telescope neoclip<CR>', {noremap 
 vim.api.nvim_set_keymap( 'n',   '<Space>fo', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fm', ':Telescope marks<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fs', ':Telescope spell_suggest<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>fg', ':Telescope live_grep<CR>', {noremap = true, silent = true})
 
 
 -- Tab Manipulation Keymaps

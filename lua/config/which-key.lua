@@ -8,42 +8,24 @@ require("which-key").setup {
   }
 }
 
---local wk = require("which-key")
+local wk = require("which-key")
 
 --wk.register({
   --["<leader>b"] = "Open file explorer"
 --})
 
---wk.register({
-  --w = {
-    --name = "Window Management",
-    --v = "Vertical split",
-    --s = "Horizontal split",
-    --h = "Move focus left",
-    --j = "Move focus down",
-    --k = "Move focus up",
-    --l = "Move focus right",
-    --t = "Open window in a new tab",
-    --['+'] = "Increase window size",
-    --['-'] = "Decrease window size",
-  --},
-  --t = {
-    --name = "Tab Management",
-    --n = "Go to the next tab",
-    --p = "Go to the previous tab",
-    --s = "Open the current split in a new tab",
-  --},
-  --c = {
-    --name = "Code Manipulation",
-    --a = "Open code actions dialog",
-    --f = "Format selected code",
-    --q = "Quick fix selected code",
-    --c = {
-      --name = "Code Commenting",
-      --['<space>'] = "Toggle comment",
-      --m = "Minimal comment",
-      --s = "Sexy comment",
-    --}
-  --}
---}, {prefix = "<leader>" })
+wk.register({
+  w = {
+    name = "Window, Tab and Wiki",
+    v = "Vertical split",
+    s = "Horizontal split",
+    h = "Decrease vertical split",
+    l = "Increase vertial split right",
+    j = "Decrease horizontal split",
+    k = "Increase horizontal split",
+    t = "Open window in a new tab",
+    w = "Open vimwiki index",
+    ['='] = "Resize all splits",
+  }
+}, {prefix = "<leader>" })
  

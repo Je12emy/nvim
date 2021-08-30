@@ -7,11 +7,12 @@ g.mapleader = ' '
 set.syntax = 'on'
 set.termguicolors = true
 set.errorbells = false
-set.number =  true
+set.relativenumber =  true
 set.tabstop = 4 
 set.softtabstop = 4
 bo.swapfile = false
 set.shiftwidth = 4
+o.background = "dark" -- or "light" for light mode
 set.expandtab = true
 set.smartindent = true
 set.wrap = false
@@ -27,4 +28,4 @@ set.spelllang = {'en','es'}
 -- -       THEME          -   
 -- ------------------------
 
-require('nightfox').set()
+require('nightfox').load()

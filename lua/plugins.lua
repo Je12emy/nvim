@@ -17,10 +17,11 @@ end
 require "paq" {
     "savq/paq-nvim";                  -- Let Paq manage itself
     -- NERDTree
-    "preservim/nerdtree";
+    'kyazdani42/nvim-tree.lua';
+    --"preservim/nerdtree";
     "kyazdani42/nvim-web-devicons";
-    "Xuyuanp/nerdtree-git-plugin";
-    "tiagofumo/vim-nerdtree-syntax-highlight";
+    -- "Xuyuanp/nerdtree-git-plugin";
+    -- "tiagofumo/vim-nerdtree-syntax-highlight";
     "airblade/vim-rooter";
     -- Tab
     'romgrk/barbar.nvim';
@@ -98,3 +99,4 @@ require('config/nvim-compe')
 require('config/telescope')
 require('config/which-key')
 require('config/dashboard-nvim')
+require('config/nvimtree')
