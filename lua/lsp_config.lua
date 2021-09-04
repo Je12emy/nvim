@@ -1,4 +1,5 @@
-require('lsp/tsserver')
-require('lsp/dockerls')
-require('lsp/tailwindls')
 require('lsp/cssls')
+require('lsp/dockerls')
+require('lsp/rustls')
+require('lsp/tailwindls')
+require('lsp/tsserver')
