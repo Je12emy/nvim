@@ -36,6 +36,9 @@ vim.api.nvim_set_keymap( 'n',   '<C-n>', '<cmd>lua vim.lsp.diagnostic.goto_prev(
 vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
 
+-- Formating
+vim.api.nvim_set_keymap( 'n',   '<Space>p', ':Neoformat<CR>', {noremap = true})
+
 -- Telescope
 vim.api.nvim_set_keymap( 'n',   '<Space>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Space>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
@@ -64,7 +67,7 @@ vim.api.nvim_set_keymap( 'n',   '<a-8>', ':BufferGoto 8<CR>', {noremap = true, s
 vim.api.nvim_set_keymap( 'n',   '<a-9>', ':BufferLast<CR>', {noremap = true, silent = true})
 
 -- Autocompletition
-vim.api.nvim_set_keymap( 'i',   '<C-space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
+--vim.api.nvim_set_keymap( 'i',   '<C-space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
 --vim.api.nvim_set_keymap( 'i',   '<CR>', 'compe#confirm()', {noremap = true, silent = true, expr = true})
 
 -- Floaterm

@@ -41,17 +41,22 @@ require "paq" {
     "sheerun/vim-polyglot";
     {"nvim-treesitter/nvim-treesitter", run=':TSUpdate'};
     "nvim-treesitter/playground";
-    {"prettier/vim-prettier", run='yarn install'};
-    "ap/vim-css-color";
+    "norcalli/nvim-colorizer.lua";
     "nvim-lua/plenary.nvim";
+    "sbdchd/neoformat";
     -- Git
     "airblade/vim-gitgutter";
     -- LSP
     "neovim/nvim-lspconfig";
-    "hrsh7th/nvim-compe";
-    "glepnir/lspsaga.nvim";
+    --"glepnir/lspsaga.nvim";
     "jose-elias-alvarez/nvim-lsp-ts-utils";
     "jose-elias-alvarez/null-ls.nvim"; -- Req for ts-utils
+    -- Completition + Snippets
+    "hrsh7th/cmp-nvim-lsp";
+    "hrsh7th/vim-vsnip-integ";
+    "hrsh7th/vim-vsnip";
+    "hrsh7th/cmp-buffer";
+    "hrsh7th/nvim-cmp";
     -- Vimwiki
     "vimwiki/vimwiki";
     -- Latex
@@ -83,7 +88,7 @@ require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 require('config/lualine')
 require('config/neoclip')
-require('config/nvim-compe')
+require('config/nvim-cmp')
 require('config/telescope')
 require('config/which-key')
 require('config/dashboard-nvim')
