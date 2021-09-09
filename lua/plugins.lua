@@ -39,7 +39,12 @@ require('packer').startup(function()
     use 'preservim/nerdcommenter'
     use "folke/which-key.nvim"
     use 'sheerun/vim-polyglot'
-    use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
+    use {'nvim-treesitter/nvim-treesitter',
+          run=':TSUpdate', 
+        config = function()
+          require'nvim-treesitter.configs'.setup{ highlight = { enable = true } }
+        end
+    }
     use 'nvim-treesitter/playground'
     use 'norcalli/nvim-colorizer.lua'
     use "nvim-lua/plenary.nvim"
@@ -78,9 +83,6 @@ function getWikiPath()
 end
 
 vim.g['vimwiki_list'] = {{path = getWikiPath(), syntax = 'markdown', ext = '.md'}}
-
---Treesitter
-require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 -- ------------------------
 -- -   Plug Configs       -   
