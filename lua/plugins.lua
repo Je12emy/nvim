@@ -35,20 +35,30 @@ require('packer').startup(function()
     use 'EdenEast/nightfox.nvim'
     use 'glepnir/dashboard-nvim'
     -- Utils
-    use "tpope/vim-surround"
+    use 'tpope/vim-surround'
     use 'preservim/nerdcommenter'
-    use "folke/which-key.nvim"
+    use 'folke/which-key.nvim'
     use 'sheerun/vim-polyglot'
     use {'nvim-treesitter/nvim-treesitter',
           run=':TSUpdate', 
-        config = function()
-          require'nvim-treesitter.configs'.setup{ highlight = { enable = true } }
-        end
+          config = function()
+            require'nvim-treesitter.configs'.setup {
+              highlight = { enable = true }
+            }
+          end
     }
     use 'nvim-treesitter/playground'
     use 'norcalli/nvim-colorizer.lua'
-    use "nvim-lua/plenary.nvim"
-    use "sbdchd/neoformat";
+    use 'nvim-lua/plenary.nvim'
+    use 'sbdchd/neoformat'
+    use {'lukas-reineke/indent-blankline.nvim', 
+        config = function()
+          require("indent_blankline").setup {
+          char = "|",
+          buftype_exclude = {"terminal"}
+        }
+        end
+    }
     -- Git
     use 'airblade/vim-gitgutter'
     -- LSP
