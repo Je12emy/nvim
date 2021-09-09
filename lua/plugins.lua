@@ -56,7 +56,6 @@ require('packer').startup(function()
     use 'kabouzeid/nvim-lspinstall'
     --"glepnir/lspsaga.nvim";
     use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires='jose-elias-alvarez/null-ls.nvim' }
-    --use 'jose-elias-alvarez/null-ls.nvim'; -- Req for ts-uti
     -- Completition + Snippets
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/vim-vsnip-integ'
@@ -68,30 +67,14 @@ require('packer').startup(function()
     -- Latex
     use 'lervag/vimtex'
 end)
--- ------------------------
--- -     Settings         -   
--- ------------------------
-
---VimWiki
-function getWikiPath()
-    if os.getenv('os') == 'Windows_NT'
-        then
-            return 'D:/Nextcloud/Notes'
-        else 
-            return '~/Nextcloud/Notes'
-    end
-end
-
-vim.g['vimwiki_list'] = {{path = getWikiPath(), syntax = 'markdown', ext = '.md'}}
 
 -- ------------------------
 -- -   Plug Configs       -   
 -- ------------------------
 
 require('config/lualine')
-require('config/neoclip')
-require('config/nvim-cmp')
 require('config/telescope')
 require('config/which-key')
 require('config/dashboard-nvim')
 require('config/nvimtree')
+require('config/vimwiki')
