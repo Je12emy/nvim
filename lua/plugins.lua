@@ -64,6 +64,7 @@ require('packer').startup(function()
         end
     }
     use 'onsails/lspkind-nvim'
+    use 'ray-x/lsp_signature.nvim'
     -- Git
     use 'airblade/vim-gitgutter'
     -- LSP
