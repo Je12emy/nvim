@@ -14,9 +14,6 @@ end
 require('packer').startup(function()
   -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
     -- FIle Explorer
     use 'kyazdani42/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
@@ -25,7 +22,6 @@ require('packer').startup(function()
     use 'romgrk/barbar.nvim'
     -- Telescope
     use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     -- Floating Terminal
     use "voldikss/vim-floaterm"
@@ -55,10 +51,19 @@ require('packer').startup(function()
         config = function()
           require("indent_blankline").setup {
           char = "|",
-          buftype_exclude = {"terminal"}
+          buftype_exclude = {
+          "terminal",
+          "help",
+          "dashboard",
+          "packer",
+          "lspinfo",
+          "TelescopePrompt",
+          "TelescopeResults",
+          }
         }
         end
     }
+    use 'onsails/lspkind-nvim'
     -- Git
     use 'airblade/vim-gitgutter'
     -- LSP
@@ -88,3 +93,5 @@ require('config/which-key')
 require('config/dashboard-nvim')
 require('config/nvimtree')
 require('config/vimwiki')
+require('config/lsp-kind')
+require('config/nvim-cmp')
