@@ -1,68 +1,68 @@
 -- ------------------------
--- -        PAQ           -   
+-- -      PACKER          -   
 -- ------------------------
-
 local fn = vim.fn
-
-local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
-
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
+  fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  vim.cmd 'packadd packer.nvim'
 end
 
 -- ------------------------
 -- -      PLUGINS         -   
 -- ------------------------
+require('packer').startup(function()
+  -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-require "paq" {
-    "savq/paq-nvim";                  -- Let Paq manage itself
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
     -- FIle Explorer
-    'kyazdani42/nvim-tree.lua';
-    "kyazdani42/nvim-web-devicons";
-    "airblade/vim-rooter";
+    use 'kyazdani42/nvim-tree.lua'
+    use 'kyazdani42/nvim-web-devicons'
+    use 'airblade/vim-rooter'
     -- Tab
-    'romgrk/barbar.nvim';
+    use 'romgrk/barbar.nvim'
     -- Telescope
-    "nvim-lua/popup.nvim";
-    "nvim-lua/plenary.nvim";
-    "nvim-telescope/telescope.nvim";
+    use 'nvim-lua/popup.nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-telescope/telescope.nvim'
     -- Floating Terminal
-    "voldikss/vim-floaterm";
+    use "voldikss/vim-floaterm"
     -- Status Line
-    "hoob3rt/lualine.nvim";
+    use "hoob3rt/lualine.nvim"
     -- Theme
-    "EdenEast/nightfox.nvim";
-    "glepnir/dashboard-nvim";
+    use 'EdenEast/nightfox.nvim'
+    use 'glepnir/dashboard-nvim'
     -- Utils
-    "AckslD/nvim-neoclip.lua";
-    "tpope/vim-surround";
-    "preservim/nerdcommenter";
-    "folke/which-key.nvim";
-    "sheerun/vim-polyglot";
-    {"nvim-treesitter/nvim-treesitter", run=':TSUpdate'};
-    "nvim-treesitter/playground";
-    "norcalli/nvim-colorizer.lua";
-    "nvim-lua/plenary.nvim";
-    "sbdchd/neoformat";
+    use "tpope/vim-surround"
+    use 'preservim/nerdcommenter'
+    use "folke/which-key.nvim"
+    use 'sheerun/vim-polyglot'
+    use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
+    use 'nvim-treesitter/playground'
+    use 'norcalli/nvim-colorizer.lua'
+    use "nvim-lua/plenary.nvim"
+    use "sbdchd/neoformat";
     -- Git
-    "airblade/vim-gitgutter";
+    use 'airblade/vim-gitgutter'
     -- LSP
-    "neovim/nvim-lspconfig";
+    use 'neovim/nvim-lspconfig'
+    use 'kabouzeid/nvim-lspinstall'
     --"glepnir/lspsaga.nvim";
-    "jose-elias-alvarez/nvim-lsp-ts-utils";
-    "jose-elias-alvarez/null-ls.nvim"; -- Req for ts-utils
+    use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires='jose-elias-alvarez/null-ls.nvim' }
+    --use 'jose-elias-alvarez/null-ls.nvim'; -- Req for ts-uti
     -- Completition + Snippets
-    "hrsh7th/cmp-nvim-lsp";
-    "hrsh7th/vim-vsnip-integ";
-    "hrsh7th/vim-vsnip";
-    "hrsh7th/cmp-buffer";
-    "hrsh7th/nvim-cmp";
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/vim-vsnip-integ'
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/nvim-cmp'
     -- Vimwiki
-    "vimwiki/vimwiki";
+    use 'vimwiki/vimwiki'
     -- Latex
-    'lervag/vimtex';
-}
-
+    use 'lervag/vimtex'
+end)
 -- ------------------------
 -- -     Settings         -   
 -- ------------------------
