@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=', {noremap = true})
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NvimTreeFocus<CR>', {noremap = true, silent = true})
 
--- LSP
+-- LSP 
 vim.api.nvim_set_keymap( 'n',   'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
@@ -35,6 +35,11 @@ vim.api.nvim_set_keymap( 'n',   'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>
 vim.api.nvim_set_keymap( 'n',   '<C-n>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n',   'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
+
+-- Code
+vim.api.nvim_set_keymap( 'n',   'ci', ':TSLspImportAll<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   "co", ":TSLspOrganize<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   "cr", ":TSLspRenameFile<CR>", {noremap = true, silent = true})
 
 -- Formating
 vim.api.nvim_set_keymap( 'n',   '<Space>p', ':Neoformat<CR>', {noremap = true})
@@ -82,6 +87,3 @@ vim.api.nvim_set_keymap( 't',   'jk', '<C-\\><C-n><CR>', {noremap = true, silent
 -- Latex
 vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {noremap = true})
 
-vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>co", ":TSLspOrganize<CR>", {silent = true})
-vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cR", ":TSLspRenameFile<CR>", {silent = true})
-vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSLspImportAll<CR>", {silent = true})
