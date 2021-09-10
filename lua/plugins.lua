@@ -40,7 +40,7 @@ require('packer').startup(function()
     use 'folke/which-key.nvim'
     use 'sheerun/vim-polyglot'
     use {'nvim-treesitter/nvim-treesitter',
-          run=':TSUpdate', 
+          run=':TSUpdate',
           config = function()
             require'nvim-treesitter.configs'.setup {
               highlight = { enable = true }
