@@ -51,22 +51,6 @@ require('packer').startup(function()
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-lua/plenary.nvim'
     use 'sbdchd/neoformat'
-    use {'lukas-reineke/indent-blankline.nvim', 
-        config = function()
-          require("indent_blankline").setup {
-          char = "|",
-          buftype_exclude = {
-          "terminal",
-          "help",
-          "dashboard",
-          "packer",
-          "lspinfo",
-          "TelescopePrompt",
-          "TelescopeResults",
-          }
-        }
-        end
-    }
     use 'onsails/lspkind-nvim'
     -- Git
     use 'airblade/vim-gitgutter'
