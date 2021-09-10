@@ -14,10 +14,14 @@ end
 require('packer').startup(function()
   -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    -- FIle Explorer
-    use 'kyazdani42/nvim-tree.lua'
-    use 'kyazdani42/nvim-web-devicons'
-    use 'airblade/vim-rooter'
+    -- Tree Explorer
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires={
+        {'kyazdani42/nvim-web-devicons'},
+      },
+      'airblade/vim-rooter'
+    }
     -- Tab
     use 'romgrk/barbar.nvim'
     -- Telescope
