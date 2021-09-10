@@ -22,7 +22,7 @@ set.incsearch = true
 set.clipboard = 'unnamed'
 set.clipboard = 'unnamedplus'
 set.hlsearch = true
-set.timeoutlen = 1000
+o.timeoutlen = 3000
 set.cursorline = true
 set.spelllang = {'en','es'}
 -- ------------------------
