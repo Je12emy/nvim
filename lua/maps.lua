@@ -37,9 +37,9 @@ vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next(
 vim.api.nvim_set_keymap( 'n',   'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
 
 -- Code
-vim.api.nvim_set_keymap( 'n',   'ci', ':TSLspImportAll<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   "co", ":TSLspOrganize<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( 'n',   "cr", ":TSLspRenameFile<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   '<Space>ci', ':TSLspImportAll<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   "<Space>co", ":TSLspOrganize<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap( 'n',   "<Space>cr", ":TSLspRenameFile<CR>", {noremap = true, silent = true})
 
 -- Formating
 vim.api.nvim_set_keymap( 'n',   '<Space>p', ':Neoformat<CR>', {noremap = true})
