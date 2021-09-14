@@ -43,6 +43,9 @@ vim.api.nvim_set_keymap( 'n',   '<Space>ci', ':TSLspImportAll<CR>', options)
 vim.api.nvim_set_keymap( 'n',   "<Space>co", ":TSLspOrganize<CR>", options)
 vim.api.nvim_set_keymap( 'n',   "<Space>cr", ":TSLspRenameFile<CR>", options)
 
+vim.g['NERDCreateDefaultMappings'] = 0
+vim.api.nvim_set_keymap( 'n',   "<Space>c<Space>", "<Plug>NERDCommenterToggle", {silent = true, noremap = false})
+
 -- Formating
 vim.api.nvim_set_keymap( 'n',   '<Space>p', ':Neoformat<CR>', options)
 
