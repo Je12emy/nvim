@@ -7,11 +7,9 @@ require('packer').startup(function()
     -- Tree Explorer
     use {
       'kyazdani42/nvim-tree.lua',
-      requires={
-        'kyazdani42/nvim-web-devicons',
-      },
       'airblade/vim-rooter'
     }
+    use 'kyazdani42/nvim-web-devicons'
     -- Tab
     use 'romgrk/barbar.nvim'
     -- Telescope
