@@ -22,6 +22,7 @@ require('packer').startup(function()
     -- Theme
     use 'EdenEast/nightfox.nvim'
     use 'glepnir/dashboard-nvim'
+    use 'eddyekofo94/gruvbox-flat.nvim'
     -- Utils
     use 'tpope/vim-surround'
     use 'preservim/nerdcommenter'
@@ -58,6 +59,16 @@ require('packer').startup(function()
     -- Latex
     use 'lervag/vimtex'
 end)
+
+
+-- ------------------------
+-- -       THEME          -   
+-- ------------------------
+
+vim.cmd[[colorscheme gruvbox-flat]]
+vim.g.gruvbox_flat_style = "dark"
+vim.g.gruvbox_flat_style = "hard"
+
 
 -- ------------------------
 -- -   Plug Configs       -   

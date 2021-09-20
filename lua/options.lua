@@ -25,8 +25,3 @@ set.hlsearch = true
 o.timeoutlen = 3000
 set.cursorline = true
 set.spelllang = {'en','es'}
--- ------------------------
--- -       THEME          -   
--- ------------------------
-
-require('nightfox').load()
