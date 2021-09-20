@@ -1,9 +1,6 @@
-require('lsp/cssls')
 require('lsp/dockerls')
-require('lsp/rustls')
 require('lsp/tailwindls')
 require('lsp/tsserver')
-require('lsp/sveltels')
 
 
 local nvim_lsp = require('lspconfig')
