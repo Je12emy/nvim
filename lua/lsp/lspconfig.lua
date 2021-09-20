@@ -1,6 +1,3 @@
-require('lsp/dockerls')
-require('lsp/tailwindls')
-require('lsp/tsserver')
 
 
 local nvim_lsp = require('lspconfig')

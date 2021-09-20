@@ -1,15 +1,20 @@
-require('maps')
-require('lsp_config')
-require('options')
-require('plugins')
-
-
 -- ------------------------
--- -      PACKER          -   
+-- -      Modules         -   
 -- ------------------------
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-  vim.cmd 'packadd packer.nvim'
-end
+-- General Options
+require('keymaps')
+require('settings')
+-- Plugins
+require('plugins/packer-nvim')
+require('plugins/lualine')
+require('plugins/telescope')
+require('plugins/dashboard-nvim')
+require('plugins/nvimtree')
+require('plugins/vimwiki')
+require('plugins/lsp-kind')
+require('plugins/nvim-cmp')
+-- Lsp
+require('lsp/lspconfig')
+require('lsp/dockerls')
+require('lsp/tailwindls')
+require('lsp/tsserver')

@@ -1,4 +1,15 @@
 -- ------------------------
+-- -      BOOTSTRAP       -   
+-- ------------------------
+
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  vim.cmd 'packadd packer.nvim'
+end
+
+-- ------------------------
 -- -      PLUGINS         -   
 -- ------------------------
 require('packer').startup(function()
@@ -64,16 +75,3 @@ end)
 vim.cmd[[colorscheme gruvbox-flat]]
 vim.g.gruvbox_flat_style = "dark"
 vim.g.gruvbox_flat_style = "hard"
-
-
--- ------------------------
--- -   Plug Configs       -   
--- ------------------------
-
-require('config/lualine')
-require('config/telescope')
-require('config/dashboard-nvim')
-require('config/nvimtree')
-require('config/vimwiki')
-require('config/lsp-kind')
-require('config/nvim-cmp')
