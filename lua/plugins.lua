@@ -26,7 +26,6 @@ require('packer').startup(function()
     -- Utils
     use 'tpope/vim-surround'
     use 'preservim/nerdcommenter'
-    use 'folke/which-key.nvim'
     use 'sheerun/vim-polyglot'
     use {'nvim-treesitter/nvim-treesitter',
           run=':TSUpdate',
@@ -37,7 +36,6 @@ require('packer').startup(function()
           end
     }
     use 'nvim-treesitter/playground'
-    use 'norcalli/nvim-colorizer.lua'
     use 'nvim-lua/plenary.nvim'
     use 'sbdchd/neoformat'
     use 'onsails/lspkind-nvim'
@@ -56,8 +54,6 @@ require('packer').startup(function()
     use 'hrsh7th/nvim-cmp'
     -- Vimwiki
     use 'vimwiki/vimwiki'
-    -- Latex
-    use 'lervag/vimtex'
 end)
 
 
@@ -76,7 +72,6 @@ vim.g.gruvbox_flat_style = "hard"
 
 require('config/lualine')
 require('config/telescope')
-require('config/which-key')
 require('config/dashboard-nvim')
 require('config/nvimtree')
 require('config/vimwiki')
