@@ -1,7 +1,7 @@
 local options = {
-      theme = 'nightfox',
-      component_separators = {'', ''},
-      section_separators = {'', ''},
+      theme = 'gruvbox-flat',
+      section_separators = {'', ''},
+      component_separators = {'', ''}
 }
 
 require('lualine').setup({
