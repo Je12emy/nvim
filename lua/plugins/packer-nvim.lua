@@ -36,7 +36,7 @@ require('packer').startup(function()
     use 'eddyekofo94/gruvbox-flat.nvim'
     -- Utils
     use 'tpope/vim-surround'
-    use 'preservim/nerdcommenter'
+    use 'shoukoo/commentary.nvim'
     use 'sheerun/vim-polyglot'
     use {'nvim-treesitter/nvim-treesitter',
           run=':TSUpdate',
