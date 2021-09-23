@@ -9,6 +9,7 @@ set.termguicolors = true
 set.errorbells = false
 set.relativenumber =  true
 set.number =  true
+set.hidden =  true
 set.tabstop = 4 
 set.softtabstop = 4
 bo.swapfile = false
