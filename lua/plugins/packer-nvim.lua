@@ -52,6 +52,7 @@ require('packer').startup(function()
     use 'nvim-lua/plenary.nvim'
     use 'sbdchd/neoformat'
     use 'onsails/lspkind-nvim'
+    use 'tpope/vim-fugitive'
     -- Git
     use 'airblade/vim-gitgutter'
     -- LSP
