@@ -1,7 +1,6 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 local g = vim.g
 
-g.nvim_tree_disable_default_keybindings = 1
 local list = {
       { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
       { key = {"<2-RightMouse>", "<C-]>", "<C-d>"},    cb = tree_cb("cd") },
@@ -88,22 +87,19 @@ require'nvim-tree'.setup {
     mappings = {
       -- custom only false will merge the list with the default mappings
       -- if true, it will only use your list to set the mappings
-      custom_only = false,
+      custom_only = true,
       -- list of mappings to set on the tree manually
       list = list
     }
   }
 }
 
-
 g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
 g.nvim_tree_allow_resize = 1
-g.nvim_tree_disable_netrw = 1
 g.nvim_tree_git_hl = 1
 g.nvim_tree_gitignore = 1
 g.nvim_tree_hide_dotfiles = 0
 g.nvim_tree_highlight_opened_files = 0
-g.nvim_tree_hijack_netrw = 1
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_ignore = { ".git", ".cache" }
 g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
