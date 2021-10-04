@@ -1,6 +1,4 @@
-
-
-local nvim_lsp = require('lspconfig')
+local nvim_lsp = require 'lspconfig'
 
 require('lspkind').init({
     -- enables text annotations
@@ -13,7 +11,7 @@ require('lspkind').init({
     -- 'codicons' for codicon preset (requires vscode-codicons font)
     --
     -- default: 'default'
-    preset = 'codicons',
+    preset = 'default',
 
     -- override preset symbols
     --
@@ -47,31 +45,21 @@ require('lspkind').init({
     },
 })
 
-require'lspinstall'.setup() -- important
 
-local servers = require'lspinstall'.installed_servers()
-
-for _, server in pairs(servers) do
-  require'lspconfig'[server].setup{}
-end
-
--- Add additional capabilities supported by nvim-cmp
+-- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.preselectSupport = true
-capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
-capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
-capabilities.textDocument.completion.completionItem.deprecatedSupport = true
-capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
-capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    'documentation',
-    'detail',
-    'additionalTextEdits',
-  },
-}
+
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+-- Enable the following language servers
+local servers = { 'tsserver', 'csharp_ls' }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    capabilities = capabilities,
+  }
+end
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

@@ -27,14 +27,12 @@ require('packer').startup(function()
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-telescope/telescope.nvim'
-    -- Floating Terminal
+    -- Terminal
     use "voldikss/vim-floaterm"
-    -- Status Line
-    use "hoob3rt/lualine.nvim"
-    -- Theme
-    use 'EdenEast/nightfox.nvim'
+    -- UI
     use 'glepnir/dashboard-nvim'
     use 'eddyekofo94/gruvbox-flat.nvim'
+    use "hoob3rt/lualine.nvim"
     -- Utils
     use 'tpope/vim-surround'
     use 'shoukoo/commentary.nvim'
@@ -48,7 +46,6 @@ require('packer').startup(function()
           end
     }
     use 'nvim-treesitter/playground'
-    use 'nvim-lua/plenary.nvim'
     use 'sbdchd/neoformat'
     use 'onsails/lspkind-nvim'
     use 'tpope/vim-fugitive'
@@ -56,13 +53,11 @@ require('packer').startup(function()
     use 'airblade/vim-gitgutter'
     -- LSP
     use 'neovim/nvim-lspconfig'
-    use 'kabouzeid/nvim-lspinstall'
-    --"glepnir/lspsaga.nvim";
-    use { 'jose-elias-alvarez/nvim-lsp-ts-utils', requires='jose-elias-alvarez/null-ls.nvim' }
     -- Completition + Snippets
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
+    use "rafamadriz/friendly-snippets"
     use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/vim-vsnip-integ'
-    use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
     -- Vimwiki
