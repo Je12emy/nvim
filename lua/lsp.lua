@@ -48,13 +48,14 @@ require('lspkind').init({
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'tsserver', 'csharp_ls' }
+require'lspinstall'.setup()
+local servers = require'lspinstall'.installed_servers()
+table.insert(servers, 'tsserver')
+
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     capabilities = capabilities,

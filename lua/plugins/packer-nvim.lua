@@ -47,11 +47,13 @@ require('packer').startup(function()
     }
     use 'nvim-treesitter/playground'
     use 'sbdchd/neoformat'
+    use 'nvim-lua/plenary.nvim'
     -- Git
     use 'airblade/vim-gitgutter'
     use 'tpope/vim-fugitive'
     -- LSP
     use 'neovim/nvim-lspconfig'
+    use 'kabouzeid/nvim-lspinstall'
     -- Completition + Snippets
     use 'onsails/lspkind-nvim'
     use 'L3MON4D3/LuaSnip'
