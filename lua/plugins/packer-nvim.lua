@@ -54,6 +54,11 @@ require('packer').startup(function()
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
+    use {'glepnir/lspsaga.nvim',
+        config = function() 
+          require ('lspsaga').init()
+        end
+    }
     -- Completition + Snippets
     use 'onsails/lspkind-nvim'
     use 'L3MON4D3/LuaSnip'

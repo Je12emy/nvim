@@ -29,14 +29,15 @@ vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NvimTreeFocus<CR>', options)
 
 -- LSP 
-vim.api.nvim_set_keymap( 'n',   'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'gr', '<cmd>lua vim.lsp.buf.references()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'K', '<cmd>lua vim.lsp.buf.hover()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<C-n>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'gd', ':Lspsaga preview_definition<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'gi', ':Lspsaga lsp_finder<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'K', ':Lspsaga hover_doc<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>gs', ':Lspsaga signature_help()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>ca', ':Lspsaga code_action<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cr', ':Lspsaga rename<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cd', ':Lspsaga show_line_diagnostics<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cdn', ':Lspsaga diagnostic_jump_next<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cdp', ':Lspsaga diagnostic_jump_prev<CR>', options)
 
 -- Code
 vim.api.nvim_set_keymap( 'n',   '<Space>ci', ':TSLspImportAll<CR>', options)
