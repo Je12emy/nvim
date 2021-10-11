@@ -31,7 +31,7 @@ require('packer').startup(function()
     use "voldikss/vim-floaterm"
     -- UI
     use 'glepnir/dashboard-nvim'
-    use 'eddyekofo94/gruvbox-flat.nvim'
+    use 'marko-cerovac/material.nvim'
     use "hoob3rt/lualine.nvim"
     -- Utils
     use 'tpope/vim-surround'
@@ -76,6 +76,5 @@ end)
 -- -       THEME          -   
 -- ------------------------
 
-vim.cmd[[colorscheme gruvbox-flat]]
-vim.g.gruvbox_flat_style = "dark"
-vim.g.gruvbox_flat_style = "hard"
+vim.cmd[[colorscheme material]]
+vim.g.material_style = "darker"

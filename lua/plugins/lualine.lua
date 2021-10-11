@@ -1,7 +1,5 @@
 local options = {
-      theme = 'gruvbox-flat',
-      section_separators = {'', ''},
-      component_separators = {'', ''},
+      theme = "material-nvim",
       disabled_filetypes = {'NvimTree'}
 }
 
