@@ -22,27 +22,22 @@ vim.api.nvim_set_keymap( 'n',   '<Space>wh', ':exe "vertical resize -" .5<CR>', 
 vim.api.nvim_set_keymap( 'n',   '<Space>wl', ':exe "vertical resize +" .5<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Space>wj', ':exe "resize -" .5<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Space>wk', ':exe "resize +" .5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=<CR>', options)
 
 -- Nvim Tree
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Leader>n', ':NvimTreeFocus<CR>', options)
 
 -- LSP 
-vim.api.nvim_set_keymap( 'n',   'gd', ':Lspsaga preview_definition<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'gi', ':Lspsaga lsp_finder<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'K', ':Lspsaga hover_doc<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>gs', ':Lspsaga signature_help()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>ca', ':Lspsaga code_action<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cr', ':Lspsaga rename<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cd', ':Lspsaga show_line_diagnostics<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cdn', ':Lspsaga diagnostic_jump_next<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cdp', ':Lspsaga diagnostic_jump_prev<CR>', options)
-
--- Code
-vim.api.nvim_set_keymap( 'n',   '<Space>ci', ':TSLspImportAll<CR>', options)
-vim.api.nvim_set_keymap( 'n',   "<Space>co", ":TSLspOrganize<CR>", options)
-vim.api.nvim_set_keymap( 'n',   "<Space>cr", ":TSLspRenameFile<CR>", options)
+vim.api.nvim_set_keymap( 'n',   'gd', ':lua vim.lsp.buf.definition()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'gi', ':lua vim.lsp.buf.implementation()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'K', ':lua vim.lsp.buf.hover()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>gs', ':lua vim.lsp.buf.signature_help()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>ca', ':lua vim.lsp.buf.code_action()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cr', ':lua vim.lsp.buf.rename()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cd', ':lua vim.lsp.diagnostic.show_line_diagnostics()', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cdn', ':lua vim.lsp.diagnostic.get_next()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cdp', ':lua vim.lsp.diagnostic.get_prev()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>f', ':lua vim.lsp.buf.formatting()<CR>', options)
 
 -- Formating
 vim.api.nvim_set_keymap( 'n',   '<Space>p', ':Neoformat<CR>', options)
@@ -87,6 +82,6 @@ vim.api.nvim_set_keymap( 't',   '<F11>', '<C-\\><C-n>:FloatermNext<CR>', options
 vim.api.nvim_set_keymap( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>', options)
 vim.api.nvim_set_keymap( 't',   'jk', '<C-\\><C-n><CR>', options)
 
--- Latex
+-- Writting
 vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {silent = false})
 

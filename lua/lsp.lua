@@ -52,15 +52,21 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-require'lspinstall'.setup()
-local servers = require'lspinstall'.installed_servers()
-table.insert(servers, 'tsserver')
+local lsp_installer = require("nvim-lsp-installer")
 
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    capabilities = capabilities,
-  }
-end
+lsp_installer.on_server_ready(function(server)
+    local opts = {
+      capabilities = capabilities
+    }
 
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

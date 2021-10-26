@@ -54,12 +54,9 @@ require('packer').startup(function()
     use 'airblade/vim-gitgutter'
     use 'tpope/vim-fugitive'
     -- LSP
-    use 'neovim/nvim-lspconfig'
-    use 'kabouzeid/nvim-lspinstall'
-    use {'glepnir/lspsaga.nvim',
-        config = function() 
-          require ('lspsaga').init()
-        end
+    use {
+      'neovim/nvim-lspconfig', 
+      'williamboman/nvim-lsp-installer',
     }
     -- Completition + Snippets
     use 'onsails/lspkind-nvim'
