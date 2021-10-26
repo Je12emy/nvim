@@ -1,5 +1,5 @@
 local options = {
-      theme = "material-nvim",
+      theme = "onedark",
       disabled_filetypes = {'NvimTree'}
 }
 

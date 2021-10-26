@@ -31,8 +31,10 @@ require('packer').startup(function()
     use "voldikss/vim-floaterm"
     -- UI
     use 'glepnir/dashboard-nvim'
-    use 'marko-cerovac/material.nvim'
     use "hoob3rt/lualine.nvim"
+    -- Themes
+    use 'navarasu/onedark.nvim'
+    use 'olimorris/onedarkpro.nvim'
     -- Utils
     use 'tpope/vim-surround'
     use 'shoukoo/commentary.nvim'
@@ -75,6 +77,5 @@ end)
 -- ------------------------
 -- -       THEME          -   
 -- ------------------------
-
-vim.cmd[[colorscheme material]]
-vim.g.material_style = "darker"
+require('onedarkpro').load()
+vim.cmd[[let g:onedark_style = 'darker']]
