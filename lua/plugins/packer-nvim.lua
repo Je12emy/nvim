@@ -37,7 +37,12 @@ require('packer').startup(function()
     use 'olimorris/onedarkpro.nvim'
     -- Utils
     use 'tpope/vim-surround'
-    use 'shoukoo/commentary.nvim'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
     use 'sheerun/vim-polyglot'
     use {'nvim-treesitter/nvim-treesitter',
           run=':TSUpdate',
@@ -50,6 +55,12 @@ require('packer').startup(function()
     use 'nvim-treesitter/playground'
     use 'sbdchd/neoformat'
     use 'nvim-lua/plenary.nvim'
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {}
+      end
+    }
     -- Git
     use 'airblade/vim-gitgutter'
     use 'tpope/vim-fugitive'

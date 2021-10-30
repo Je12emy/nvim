@@ -31,16 +31,16 @@ vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', options)
 vim.api.nvim_set_keymap( 'n',   'gd', ':lua vim.lsp.buf.definition()<CR>', options)
 vim.api.nvim_set_keymap( 'n',   'gi', ':lua vim.lsp.buf.implementation()<CR>', options)
 vim.api.nvim_set_keymap( 'n',   'K', ':lua vim.lsp.buf.hover()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>gs', ':lua vim.lsp.buf.signature_help()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'gs', ':lua vim.lsp.buf.signature_help()<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Space>ca', ':lua vim.lsp.buf.code_action()<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Space>cr', ':lua vim.lsp.buf.rename()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cd', ':lua vim.lsp.diagnostic.show_line_diagnostics()', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cdn', ':lua vim.lsp.diagnostic.get_next()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cdp', ':lua vim.lsp.diagnostic.get_prev()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>f', ':lua vim.lsp.buf.formatting()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   'cd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<C-]>d', ':lua vim.lsp.diagnostic.goto_next()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<C-[>d', ':lua vim.lsp.diagnostic.goto_prev()<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cf', ':lua vim.lsp.buf.formatting()<CR>', options)
 
 -- Formating
-vim.api.nvim_set_keymap( 'n',   '<Space>p', ':Neoformat<CR>', options)
+vim.api.nvim_set_keymap( 'n',   '<Space>cp', ':Neoformat<CR>', options)
 
 -- Telescope
 vim.api.nvim_set_keymap( 'n',   '<Space>ff', ':Telescope find_files<CR>', options)

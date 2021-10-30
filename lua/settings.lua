@@ -25,4 +25,5 @@ set.clipboard = 'unnamedplus'
 set.hlsearch = true
 o.timeoutlen = 3000
 set.cursorline = true
+set.wrapscan = true
 set.spelllang = {'en','es'}
