@@ -79,7 +79,10 @@ require'nvim-tree'.setup {
     -- the command arguments as a list
     args = {}
   },
-
+  filters = {
+    dotfiles = true,
+    custom = { ".git" }
+  },
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`
     width = 30,
@@ -101,10 +104,8 @@ g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
 g.nvim_tree_allow_resize = 1
 g.nvim_tree_git_hl = 1
 g.nvim_tree_gitignore = 1
-g.nvim_tree_hide_dotfiles = 0
 g.nvim_tree_highlight_opened_files = 0
 g.nvim_tree_indent_markers = 1
-g.nvim_tree_ignore = { ".git", ".cache" }
 g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
 g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
