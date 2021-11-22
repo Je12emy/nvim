@@ -24,7 +24,8 @@ local cmp = require'cmp'
     sources = {
       { name = "nvim_lsp" },
       { name = "buffer" },
-      { name = "luasnip" }
+      { name = "luasnip" },
+      { name = "neorg" }
     },
     formatting = {
       format = function(entry, vim_item)
