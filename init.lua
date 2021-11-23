@@ -13,5 +13,6 @@ require('plugins/nvimtree')
 require('plugins/vimwiki')
 require('plugins/lsp-kind')
 require('plugins/nvim-cmp')
+require('plugins/norg')
 -- Lsp
 require('lsp')
