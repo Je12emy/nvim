@@ -10,6 +10,9 @@ parser_configs.norg = {
 
 require('nvim-treesitter.configs').setup {
 	ensure_installed = { "norg" },
+    highlight = { -- Be sure to enable highlights if you haven't!
+        enable = true,
+    }
 }
 
 require('neorg').setup {
@@ -20,7 +23,7 @@ require('neorg').setup {
         ["core.norg.dirman"] = { -- Manage your directories with Neorg
             config = {
                 workspaces = {
-                    my_workspace = "~/neorg"
+                    my_workspace = "~/journal"
                 }
             }
         },

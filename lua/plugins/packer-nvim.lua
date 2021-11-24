@@ -81,6 +81,7 @@ require('packer').startup(function()
     use 'vimwiki/vimwiki'
     use { 
         "nvim-neorg/neorg",
+        branch = "unstable",
         requires = "nvim-lua/plenary.nvim"
     }
 end)
