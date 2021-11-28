@@ -78,6 +78,8 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
+    -- Svelte Development
+    use 'leafOfTree/vim-svelte-plugin'
     -- Journaling
     use 'vimwiki/vimwiki'
     use { 
