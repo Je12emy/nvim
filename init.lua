@@ -14,5 +14,6 @@ require('plugins/vimwiki')
 require('plugins/lsp-kind')
 require('plugins/nvim-cmp')
 require('plugins/norg')
+require('plugins/zen-mode')
 -- Lsp
 require('lsp')

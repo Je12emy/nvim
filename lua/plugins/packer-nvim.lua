@@ -61,6 +61,7 @@ require('packer').startup(function()
         require("which-key").setup {}
       end
     }
+    use "folke/zen-mode.nvim"
     -- Git
     use 'airblade/vim-gitgutter'
     use 'tpope/vim-fugitive'
