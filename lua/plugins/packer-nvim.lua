@@ -68,7 +68,7 @@ require('packer').startup(function()
     -- LSP
     use {
       'neovim/nvim-lspconfig', 
-      { 'williamboman/nvim-lsp-installer', branch = 'dartls' }
+      { 'williamboman/nvim-lsp-installer' }
     }
     -- Completition + Snippets
     use 'onsails/lspkind-nvim'
