@@ -61,7 +61,11 @@ require('packer').startup(function()
         require("which-key").setup {}
       end
     }
-    use "folke/zen-mode.nvim"
+    -- Focus
+    use {
+      'junegunn/goyo.vim', 
+      requires = 'junegunn/limelight.vim'
+    }
     -- Git
     use {
       'lewis6991/gitsigns.nvim',
