@@ -87,6 +87,7 @@ require('packer').startup(function()
         branch = "unstable",
         requires = "nvim-lua/plenary.nvim"
     }
+    -- Documents
     use 'lervag/vimtex'
 end)
 

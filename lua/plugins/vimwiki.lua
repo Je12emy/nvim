@@ -9,4 +9,4 @@ function getWikiPath()
     end
 end
 
-g['vimwiki_list'] = {{path = getWikiPath(), syntax = 'markdown', ext = '.md'}}
+g['vimwiki_list'] = {{path = '~/wiki', syntax = 'markdown', ext = '.md'}}
