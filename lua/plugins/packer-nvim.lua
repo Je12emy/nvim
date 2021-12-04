@@ -63,7 +63,12 @@ require('packer').startup(function()
     }
     use "folke/zen-mode.nvim"
     -- Git
-    use 'airblade/vim-gitgutter'
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      },
+    }
     use 'tpope/vim-fugitive'
     -- LSP
     use {

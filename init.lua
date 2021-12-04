@@ -16,5 +16,6 @@ require('plugins/nvim-cmp')
 require('plugins/norg')
 require('plugins/zen-mode')
 require('plugins/vimtex')
+require('plugins/gitsigns')
 -- Lsp
 require('lsp')
