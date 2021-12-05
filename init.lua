@@ -17,5 +17,6 @@ require('plugins/norg')
 require('plugins/vimtex')
 require('plugins/gitsigns')
 require('plugins/goyo')
+require('plugins/catpuccin')
 -- Lsp
 require('lsp')

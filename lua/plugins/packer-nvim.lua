@@ -33,8 +33,10 @@ require('packer').startup(function()
     use 'glepnir/dashboard-nvim'
     use "hoob3rt/lualine.nvim"
     -- Themes
-    use 'navarasu/onedark.nvim'
-    use 'olimorris/onedarkpro.nvim'
+    use({
+        "catppuccin/nvim",
+        as = "catppuccin"
+    })
     -- Utils
     use 'tpope/vim-surround'
     use {
@@ -101,8 +103,3 @@ require('packer').startup(function()
 end)
 
 
--- ------------------------
--- -       THEME          -   
--- ------------------------
-require('onedarkpro').load()
-vim.cmd[[let g:onedark_style = 'darker']]
