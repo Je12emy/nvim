@@ -37,6 +37,7 @@ require('neorg').setup {
             config = {
                 engine = "nvim-cmp" -- We current support nvim-compe and nvim-cmp only
             }
-        }
+        },
+        ["core.norg.journal"] = {}
     },
 }
