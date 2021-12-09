@@ -39,12 +39,7 @@ require('packer').startup(function()
     })
     -- Utils
     use 'tpope/vim-surround'
-    use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
+    use 'numToStr/Comment.nvim'
     use 'sheerun/vim-polyglot'
     use {'nvim-treesitter/nvim-treesitter',
           run=':TSUpdate',

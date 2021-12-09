@@ -18,5 +18,6 @@ require('plugins/vimtex')
 require('plugins/gitsigns')
 require('plugins/goyo')
 require('plugins/catpuccin')
+require('plugins/comment')
 -- Lsp
 require('lsp')
