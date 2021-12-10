@@ -23,7 +23,7 @@ require('neorg').setup {
         ["core.norg.dirman"] = { -- Manage your directories with Neorg
             config = {
                 workspaces = {
-                    my_workspace = "~/wiki/personal"
+                    my_workspace = "~/wiki/diary"
                 }
             }
         },
