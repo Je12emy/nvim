@@ -19,5 +19,6 @@ require('plugins/gitsigns')
 require('plugins/goyo')
 require('plugins/catpuccin')
 require('plugins/comment')
+require('plugins/rust-tools')
 -- Lsp
 require('lsp')

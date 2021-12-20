@@ -84,13 +84,14 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
-    -- Svelte Development
+    -- Language Specific Plugins
     use 'leafOfTree/vim-svelte-plugin'
+    use 'simrat39/rust-tools.nvim'
     -- Journaling
     use 'vimwiki/vimwiki'
     use { 
         "nvim-neorg/neorg",
-        branch = "unstable",
+        branch = "main",
         requires = "nvim-lua/plenary.nvim"
     }
     -- Documents

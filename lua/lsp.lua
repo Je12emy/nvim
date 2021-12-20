@@ -63,7 +63,18 @@ lsp_installer.on_server_ready(function(server)
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
     -- end
-
+    if server.name == "rust_analyzer" then
+            require("rust-tools").setup({
+                -- dap = {
+                --     adapter = require("rust-tools.dap").get_codelldb_adapter(
+                --         "/home/simrat39/.vscode/extensions/vadimcn.vscode-lldb-1.6.7/adapter/codelldb",
+                --         "/home/simrat39/.vscode/extensions/vadimcn.vscode-lldb-1.6.7/lldb/lib/liblldb.so"
+                --     ),
+                -- },
+                server = server:get_default_options()
+            })
+            return
+    end
     -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
     server:setup(opts)
     vim.cmd [[ do User LspAttachBuffers ]]
