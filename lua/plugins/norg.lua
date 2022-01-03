@@ -1,3 +1,5 @@
+local options = require'map_options'
+
 local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
 
 parser_configs.norg = {
@@ -22,7 +24,7 @@ require('neorg').setup {
         ["core.norg.concealer"] = {
             config = {
                 markup = { enable = true },
-                markup_preset = "brave"
+                markup_preset = "safe" -- brave for better link concealing
             }
         }, -- Allows for use of icons
         ["core.norg.dirman"] = { -- Manage your directories with Neorg
@@ -46,3 +48,5 @@ require('neorg').setup {
         ["core.norg.journal"] = {}
     },
 }
+
+vim.api.nvim_set_keymap( 'n','<Space>wo',':NeorgStart<CR>', options)
