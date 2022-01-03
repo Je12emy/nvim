@@ -22,6 +22,7 @@ require('neorg').setup {
         ["core.norg.concealer"] = {
             config = {
                 markup = { enable = true },
+                markup_preset = "brave"
             }
         }, -- Allows for use of icons
         ["core.norg.dirman"] = { -- Manage your directories with Neorg
