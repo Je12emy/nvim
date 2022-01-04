@@ -20,5 +20,6 @@ require('plugins/goyo')
 require('plugins/catpuccin')
 require('plugins/comment')
 require('plugins/rust-tools')
+require('plugins/barbar')
 -- Lsp
 require('lsp')

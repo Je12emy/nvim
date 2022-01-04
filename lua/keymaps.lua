@@ -54,21 +54,6 @@ vim.api.nvim_set_keymap( 'n',   '<Space>fm', ':Telescope marks<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Space>fs', ':Telescope spell_suggest<CR>', options)
 vim.api.nvim_set_keymap( 'n',   '<Space>fg', ':Telescope live_grep<CR>', options)
 
-
--- Tab Manipulation Keymaps
-vim.api.nvim_set_keymap( 'n',   '<a-.>', ':BufferNext<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-,>', ':BufferPrevious<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-c>', ':BufferClose<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-1>', ':BufferGoto 1<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-2>', ':BufferGoto 2<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-3>', ':BufferGoto 3<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-4>', ':BufferGoto 4<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-5>', ':BufferGoto 5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-6>', ':BufferGoto 6<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-7>', ':BufferGoto 7<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-8>', ':BufferGoto 8<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-9>', ':BufferLast<CR>', options)
-
 -- Autocompletition
 --vim.api.nvim_set_keymap( 'i',   '<C-space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
 --vim.api.nvim_set_keymap( 'i',   '<CR>', 'compe#confirm()', {noremap = true, silent = true, expr = true})
