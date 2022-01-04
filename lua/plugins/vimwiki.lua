@@ -1,12 +1,4 @@
 local g = vim.g
 
-function getWikiPath()
-    if os.getenv('os') == 'Windows_NT'
-        then
-            return 'D:/Nextcloud/Notes'
-        else 
-            return '~/Nextcloud/Notes'
-    end
-end
-
-g['vimwiki_list'] = {{path = '~/wiki', syntax = 'markdown', ext = '.md'}}
+g['vimwiki_list'] = { { path = '~/wiki', syntax = 'markdown', ext = '.md' }, 
+                      { path = '~/journal', syntax = 'markdown', ext = '.md' } }
