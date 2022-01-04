@@ -89,11 +89,6 @@ require('packer').startup(function()
     use 'simrat39/rust-tools.nvim'
     -- Journaling
     use 'vimwiki/vimwiki'
-    use { 
-        "nvim-neorg/neorg",
-        branch = "main",
-        requires = "nvim-lua/plenary.nvim"
-    }
     -- Documents
     use 'lervag/vimtex'
 end)
