@@ -1,4 +1,5 @@
 -- lervag/vimtex
+-- sudo apt-get install texlive-full
 vim.g["vimtext_view_method"] = 'zathura'
 vim.g["text_flavor"] = 'latex'
 vim.cmd[["
