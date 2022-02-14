@@ -5,45 +5,36 @@
 local options = { noremap = true, silent = true }
 
 -- General
-vim.api.nvim_set_keymap( 'i',   'jk', '<Esc>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>', '<Nop>', options)
-vim.api.nvim_set_keymap( 'n',   'S', ':%s//g<Left><Left>', {noremap = true})
+vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set("n", '<Space>', '<Nop>')
+vim.keymap.set('n', 'S', ':%s//g<Left><Left>')
 
 ---- Navigation Keymaps
-vim.api.nvim_set_keymap( 'n',   '<c-h>', ':wincmd h<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<c-j>', ':wincmd j<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<c-k>', ':wincmd k<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<c-l>', ':wincmd l<CR>', options)
+vim.keymap.set('n', '<c-h>', '<cmd>wincmd h<CR>')
+vim.keymap.set('n', '<c-j>', '<cmd>wincmd j<CR>')
+vim.keymap.set('n', '<c-l>', '<cmd>wincmd l<CR>')
+vim.keymap.set('n', '<c-k>', '<cmd>wincmd k<CR>')
 
 -- Window Split Manipulation
-vim.api.nvim_set_keymap( 'n',   '<Space>wv', '<C-w>v<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>ws', '<C-w>s<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>wh', ':exe "vertical resize -" .5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>wl', ':exe "vertical resize +" .5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>wj', ':exe "resize -" .5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>wk', ':exe "resize +" .5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=<CR>', options)
-
--- Nvim Tree
-vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', options)
+vim.keymap.set( 'n',   '<Space>wv', '<C-w>v<CR>')
+vim.keymap.set( 'n',   '<Space>ws', '<C-w>s<CR>')
+vim.keymap.set( 'n',   '<Space>wh', ':exe "vertical resize -" .5<CR>')
+vim.keymap.set( 'n',   '<Space>wl', ':exe "vertical resize +" .5<CR>')
+vim.keymap.set( 'n',   '<Space>wj', ':exe "resize -" .5<CR>')
+vim.keymap.set( 'n',   '<Space>wk', ':exe "resize +" .5<CR>')
+vim.keymap.set( 'n',   '<Space>wr', '<C-w>=<CR>')
 
 -- Formating
-vim.api.nvim_set_keymap( 'n',   '<Space>cp', ':Neoformat<CR>', options)
-
-
--- Autocompletition
---vim.api.nvim_set_keymap( 'i',   '<C-space>', 'compe#complete()', {noremap = true, silent = true, expr = true})
---vim.api.nvim_set_keymap( 'i',   '<CR>', 'compe#confirm()', {noremap = true, silent = true, expr = true})
+vim.keymap.set( 'n',   '<Space>cp', ':Neoformat<CR>')
 
 -- Floaterm
-vim.api.nvim_set_keymap( 'n',   '<F12>', ':FloatermToggle<CR>', options)
-vim.api.nvim_set_keymap( 't',   '<F12>', '<C-\\><C-n>:FloatermToggle<CR>', options)
-vim.api.nvim_set_keymap( 't',   '<F9>', '<C-\\><C-n>:FloatermNew<CR>', options)
-vim.api.nvim_set_keymap( 't',   '<F21>', '<C-\\><C-n>:FloatermKill<CR>', options)
-vim.api.nvim_set_keymap( 't',   '<F11>', '<C-\\><C-n>:FloatermNext<CR>', options)
-vim.api.nvim_set_keymap( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>', options)
-vim.api.nvim_set_keymap( 't',   'jk', '<C-\\><C-n><CR>', options)
+vim.keymap.set( 'n',   '<F12>', ':FloatermToggle<CR>')
+vim.keymap.set( 't',   '<F12>', '<C-\\><C-n>:FloatermToggle<CR>')
+vim.keymap.set( 't',   '<F9>', '<C-\\><C-n>:FloatermNew<CR>')
+vim.keymap.set( 't',   '<F21>', '<C-\\><C-n>:FloatermKill<CR>')
+vim.keymap.set( 't',   '<F11>', '<C-\\><C-n>:FloatermNext<CR>')
+vim.keymap.set( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>')
+vim.keymap.set( 't',   'jk', '<C-\\><C-n><CR>')
 
 -- Writting
-vim.api.nvim_set_keymap( 'n',   '<F8>', ':setlocal spell!<CR>', {silent = false})
-
+vim.keymap.set( 'n',   '<F8>', ':setlocal spell!<CR>')
