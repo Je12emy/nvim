@@ -87,6 +87,7 @@ require('packer').startup(function()
     -- Language Specific Plugins
     use 'leafOfTree/vim-svelte-plugin'
     use 'simrat39/rust-tools.nvim'
+    -- use 'fatih/vim-go'
     -- Journaling
     use 'vimwiki/vimwiki'
     -- Documents

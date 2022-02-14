@@ -34,8 +34,8 @@ local cmp = require'cmp'
 
         -- set a name for each source
         vim_item.menu = ({
-          nvim_lsp  = "[LSP]",
           luasnip   = "[SNIP]",
+          nvim_lsp  = "[LSP]",
           buffer    = "[BUFF]",
           nvim_lua  = "[LUA]",
         })[entry.source.name]
