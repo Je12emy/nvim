@@ -1,8 +1,9 @@
 # My NVIM Config
 
-A basic neovim configuration written in Lua for mostly typescript development.
+A general basic neovim configuration written in Lua.
 
 ## TODO
 
-- [ ] Clean up plugin configurations.
-- [ ] Clean up lsp server configurations.
+- [-] Clean up plugin configurations.
+- [x] Clean up lsp server configurations.
+- [ ] DAP

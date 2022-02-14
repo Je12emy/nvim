@@ -27,6 +27,7 @@ require('packer').startup(function()
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-telescope/telescope.nvim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     -- Terminal
     use "voldikss/vim-floaterm"
     -- UI
