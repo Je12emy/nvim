@@ -27,18 +27,6 @@ vim.api.nvim_set_keymap( 'n',   '<Space>wr', '<C-w>=<CR>', options)
 -- Nvim Tree
 vim.api.nvim_set_keymap( 'n',   '<c-t>', ':NvimTreeToggle<CR>', options)
 
--- LSP 
-vim.api.nvim_set_keymap( 'n',   'gd', ':lua vim.lsp.buf.definition()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'gi', ':lua vim.lsp.buf.implementation()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'K', ':lua vim.lsp.buf.hover()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'gs', ':lua vim.lsp.buf.signature_help()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>ca', ':lua vim.lsp.buf.code_action()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cr', ':lua vim.lsp.buf.rename()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   'cd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<C-]>d', ':lua vim.lsp.diagnostic.goto_next()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<C-[>d', ':lua vim.lsp.diagnostic.goto_prev()<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Space>cf', ':lua vim.lsp.buf.formatting()<CR>', options)
-
 -- Formating
 vim.api.nvim_set_keymap( 'n',   '<Space>cp', ':Neoformat<CR>', options)
 
