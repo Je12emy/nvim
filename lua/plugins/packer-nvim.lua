@@ -52,12 +52,6 @@ require('packer').startup(function()
     use 'nvim-treesitter/playground'
     use 'sbdchd/neoformat'
     use 'nvim-lua/plenary.nvim'
-    use {
-      "folke/which-key.nvim",
-      config = function()
-        require("which-key").setup {}
-      end
-    }
     -- Git
     use {
       'lewis6991/gitsigns.nvim',
