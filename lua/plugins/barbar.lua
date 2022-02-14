@@ -1,5 +1,3 @@
-local options = require'map_options'
-
 -- Set barbar's options
 vim.g.bufferline = {
   -- Enable/disable animations
@@ -15,8 +13,8 @@ vim.g.bufferline = {
   closable = true,
 
   -- Enables/disable clickable tabs
-  --  - left-click: go to buffer
-  --  - middle-click: delete buffer
+  --  - left-click<cmd> go to buffer
+  --  - middle-click<cmd> delete buffer
   clickable = true,
 
   -- Excludes buffers from the tabline
@@ -69,18 +67,18 @@ vim.g.bufferline = {
 }
 
 -- Tab Manipulation Keymaps
-vim.api.nvim_set_keymap( 'n',   '<a-.>', ':BufferNext<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-,>', ':BufferPrevious<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-c>', ':BufferClose<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-1>', ':BufferGoto 1<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-2>', ':BufferGoto 2<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-3>', ':BufferGoto 3<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-4>', ':BufferGoto 4<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-5>', ':BufferGoto 5<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-6>', ':BufferGoto 6<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-7>', ':BufferGoto 7<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-8>', ':BufferGoto 8<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<a-9>', ':BufferLast<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Leader>tca', ':BufferCloseAllButCurrent<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Leader>t<', ':BufferMovePrevious<CR>', options)
-vim.api.nvim_set_keymap( 'n',   '<Leader>t>', ':BufferMoveNext<CR>', options)
+vim.keymap.set( 'n',   '<a-.>', '<cmd>BufferNext<CR>')
+vim.keymap.set( 'n',   '<a-,>', '<cmd>BufferPrevious<CR>')
+vim.keymap.set( 'n',   '<a-c>', '<cmd>BufferClose<CR>')
+vim.keymap.set( 'n',   '<a-1>', '<cmd>BufferGoto 1<CR>')
+vim.keymap.set( 'n',   '<a-2>', '<cmd>BufferGoto 2<CR>')
+vim.keymap.set( 'n',   '<a-3>', '<cmd>BufferGoto 3<CR>')
+vim.keymap.set( 'n',   '<a-4>', '<cmd>BufferGoto 4<CR>')
+vim.keymap.set( 'n',   '<a-5>', '<cmd>BufferGoto 5<CR>')
+vim.keymap.set( 'n',   '<a-6>', '<cmd>BufferGoto 6<CR>')
+vim.keymap.set( 'n',   '<a-7>', '<cmd>BufferGoto 7<CR>')
+vim.keymap.set( 'n',   '<a-8>', '<cmd>BufferGoto 8<CR>')
+vim.keymap.set( 'n',   '<a-9>', '<cmd>BufferLast<CR>')
+vim.keymap.set( 'n',   '<Leader>tca', '<cmd>BufferCloseAllButCurrent<CR>')
+vim.keymap.set( 'n',   '<Leader>t<', '<cmd>BufferMovePrevious<CR>')
+vim.keymap.set( 'n',   '<Leader>t>', '<cmd>BufferMoveNext<CR>')

@@ -4,6 +4,7 @@
 -- General Options
 require('keymaps')
 require('settings')
+require('lsp')
 -- Plugins
 require('plugins/packer-nvim')
 require('plugins/lualine')
@@ -17,5 +18,3 @@ require('plugins/gitsigns')
 require('plugins/catpuccin')
 require('plugins/comment')
 require('plugins/barbar')
--- Lsp
-require('lsp')

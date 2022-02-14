@@ -79,5 +79,3 @@ require('packer').startup(function()
     -- Journaling
     use 'vimwiki/vimwiki'
 end)
-
-
