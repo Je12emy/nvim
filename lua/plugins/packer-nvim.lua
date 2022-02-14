@@ -58,11 +58,6 @@ require('packer').startup(function()
         require("which-key").setup {}
       end
     }
-    -- Focus
-    use {
-      'junegunn/goyo.vim', 
-      requires = 'junegunn/limelight.vim'
-    }
     -- Git
     use {
       'lewis6991/gitsigns.nvim',
@@ -86,12 +81,9 @@ require('packer').startup(function()
     use 'hrsh7th/nvim-cmp'
     -- Language Specific Plugins
     use 'leafOfTree/vim-svelte-plugin'
-    use 'simrat39/rust-tools.nvim'
     -- use 'fatih/vim-go'
     -- Journaling
     use 'vimwiki/vimwiki'
-    -- Documents
-    use 'lervag/vimtex'
 end)
 
 
