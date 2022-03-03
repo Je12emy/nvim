@@ -5,6 +5,7 @@ local o = vim.o
 
 g.mapleader = ' '
 set.syntax = 'on'
+set.mouse = 'a'
 set.termguicolors = true
 set.errorbells = false
 set.relativenumber =  true
