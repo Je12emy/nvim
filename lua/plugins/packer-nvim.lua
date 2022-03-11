@@ -51,7 +51,6 @@ require('packer').startup(function()
           end
     }
     use 'nvim-treesitter/playground'
-    use 'sbdchd/neoformat'
     use 'nvim-lua/plenary.nvim'
     -- Git
     use {
@@ -66,6 +65,9 @@ require('packer').startup(function()
       'neovim/nvim-lspconfig', 
       { 'williamboman/nvim-lsp-installer' }
     }
+    -- DAP
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'leoluz/nvim-dap-go'
     -- Completition + Snippets
     use 'onsails/lspkind-nvim'
     use 'L3MON4D3/LuaSnip'
@@ -74,6 +76,7 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lua'
     -- Language Specific Plugins
     use 'leafOfTree/vim-svelte-plugin'
     -- use 'fatih/vim-go'

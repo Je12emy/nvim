@@ -22,17 +22,5 @@ vim.keymap.set( 'n',   '<Space>wj', ':exe "resize -" .5<CR>')
 vim.keymap.set( 'n',   '<Space>wk', ':exe "resize +" .5<CR>')
 vim.keymap.set( 'n',   '<Space>wr', '<C-w>=<CR>')
 
--- Formating
-vim.keymap.set( 'n',   '<Space>cp', ':Neoformat<CR>')
-
--- Floaterm
-vim.keymap.set( 'n',   '<F12>', ':FloatermToggle<CR>')
-vim.keymap.set( 't',   '<F12>', '<C-\\><C-n>:FloatermToggle<CR>')
-vim.keymap.set( 't',   '<F9>', '<C-\\><C-n>:FloatermNew<CR>')
-vim.keymap.set( 't',   '<F21>', '<C-\\><C-n>:FloatermKill<CR>')
-vim.keymap.set( 't',   '<F11>', '<C-\\><C-n>:FloatermNext<CR>')
-vim.keymap.set( 't',   '<F10>', '<C-\\><C-n>:FloatermPrev<CR>')
-vim.keymap.set( 't',   'jk', '<C-\\><C-n><CR>')
-
 -- Writting
 vim.keymap.set( 'n',   '<F8>', ':setlocal spell!<CR>')
