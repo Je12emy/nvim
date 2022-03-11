@@ -25,7 +25,7 @@ local cmp = require'cmp'
       { name = "nvim_lsp" },
       { name = "buffer" },
       { name = "luasnip" },
-      { name = "neorg" }
+      { name = 'nvim_lua' }
     },
     formatting = {
       format = function(entry, vim_item)
@@ -37,7 +37,7 @@ local cmp = require'cmp'
           luasnip   = "[SNIP]",
           nvim_lsp  = "[LSP]",
           buffer    = "[BUFF]",
-          nvim_lua  = "[LUA]",
+          nvim_lua  = "[NVIM]",
         })[entry.source.name]
 
         return vim_item

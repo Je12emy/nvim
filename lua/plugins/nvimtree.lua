@@ -40,7 +40,6 @@ g.nvim_tree_allow_resize = 1
 g.nvim_tree_git_hl = 1
 g.nvim_tree_highlight_opened_files = 0
 g.nvim_tree_indent_markers = 1
-g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
 g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
 g.nvim_tree_show_icons = {
@@ -80,18 +79,19 @@ require'nvim-tree'.setup {
     -- enables the feature
     enable      = true,
     -- update the root directory of the tree to the one of the folder containing the file if the file is not under the current root directory
-    -- only relevant when `update_focused_file.enable` is true
-    update_cwd  = true,
-    -- list of buffer names / filetypes that will not update the cwd if the file isn't found under the current root directory
-    -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
-    ignore_list = {}
-  },
-  -- configuration options for the system open command (`s` in the tree by default)
-  system_open = {
-    -- the command to run this, leaving nil should work in most cases
-    cmd  = nil,
-    -- the command arguments as a list
-    args = {}
+      -- only relevant when `update_focused_file.enable` is true
+      update_cwd  = true,
+      -- list of buffer names / filetypes that will not update the cwd if the file isn't found under the current root directory
+        -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
+        ignore_list = {}
+      },
+      -- configuration options for the system open command (`s` in the tree by default)
+      system_open = {
+        -- the command to run this, leaving nil should work in most cases
+        cmd  = nil,
+        -- the command arguments as a list
+        args = {},
+        quit_on_open = false,
   },
   filters = {
     dotfiles = true,
