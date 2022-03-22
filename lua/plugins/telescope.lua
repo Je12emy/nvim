@@ -10,6 +10,11 @@ require('telescope').setup {
           case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                            -- the default case_mode is "smart_case"
         },
+    },
+    pickers = {
+      buffers = {
+        theme = "dropdown",
+      }
     }
 }
 -- To get fzf loaded and working with telescope, you need to call
@@ -23,5 +28,5 @@ vim.keymap.set( 'n',   '<Space>fc', ':Telescope git_commits<CR>')
 vim.keymap.set( 'n',   '<Space>fr', ':Telescope git_branches<CR>')
 vim.keymap.set( 'n',   '<Space>fm', ':Telescope marks<CR>')
 vim.keymap.set( 'n',   '<Space>fk', ':Telescope keymaps<CR>')
-vim.keymap.set( 'n',   '<Space>fbf', ':Telescope current_buffer_fuzzy_find<CR>')
+vim.keymap.set( 'n',   '<Space>fz', ':Telescope current_buffer_fuzzy_find<CR>')
 vim.keymap.set( 'n',   '<Space>fg', ':Telescope live_grep<CR>')

@@ -24,6 +24,7 @@ set.incsearch = true
 set.clipboard = 'unnamed'
 set.clipboard = 'unnamedplus'
 set.hlsearch = true
+set.laststatus = 3
 o.timeoutlen = 3000
 set.cursorline = true
 set.wrapscan = true
