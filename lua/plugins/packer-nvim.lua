@@ -60,7 +60,6 @@ require('packer').startup(function()
     -- LSP
     use {
       'neovim/nvim-lspconfig', 
-      { 'williamboman/nvim-lsp-installer' }
     }
     -- DAP
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
