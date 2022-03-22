@@ -23,15 +23,12 @@ require('packer').startup(function()
     use 'airblade/vim-rooter'
     use 'kyazdani42/nvim-web-devicons'
     -- Tab
-    use 'romgrk/barbar.nvim'
+    -- use 'romgrk/barbar.nvim'
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    -- Terminal
-    use "voldikss/vim-floaterm"
     -- UI
-    use 'glepnir/dashboard-nvim'
     use "hoob3rt/lualine.nvim"
     -- Themes
     use({
