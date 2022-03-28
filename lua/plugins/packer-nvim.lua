@@ -8,7 +8,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   vim.cmd 'packadd packer.nvim'
 end
-
 -- ------------------------
 -- -      PLUGINS         -   
 -- ------------------------
@@ -35,6 +34,7 @@ require('packer').startup(function()
         "catppuccin/nvim",
         as = "catppuccin"
     })
+    use 'gruvbox-community/gruvbox'
     -- Utils
     use 'tpope/vim-surround'
     use 'numToStr/Comment.nvim'
@@ -76,6 +76,13 @@ require('packer').startup(function()
     -- Language Specific Plugins
     use 'leafOfTree/vim-svelte-plugin'
     -- use 'fatih/vim-go'
+    use 'dart-lang/dart-vim-plugin'
+    -- use { 
+    --   'akinsho/flutter-tools.nvim',
+    --   requires = 'nvim-lua/plenary.nvim',
+    -- }
     -- Journaling
     use 'vimwiki/vimwiki'
 end)
+
+vim.cmd[[colorscheme gruvbox]]

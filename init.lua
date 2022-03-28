@@ -14,8 +14,11 @@ require('plugins/vimwiki')
 require('plugins/lsp-kind')
 require('plugins/nvim-cmp')
 require('plugins/gitsigns')
-require('plugins/catpuccin')
+-- require('plugins/catpuccin')
+require('plugins/gruvbox')
 require('plugins/comment')
 -- require('plugins/barbar')
 require('plugins/luasnip')
 require('plugins/nvim-dap')
+-- For some reasong this does not work when set from the settings module
+vim.cmd[[set laststatus=3]]

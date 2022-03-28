@@ -1,5 +1,5 @@
 local options = {
-      theme = 'catppuccin',
+      theme = 'gruvbox',
       disabled_filetypes = {'NvimTree'},
 }
 
