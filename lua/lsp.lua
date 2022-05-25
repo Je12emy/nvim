@@ -13,11 +13,11 @@ local function on_attach(client, bufnr)
   -- Set up buffer-local keymaps (vim.api.nvim_buf_set_keymap()), etc.
     vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
     vim.keymap.set("n", "gr", vim.lsp.buf.rename, { buffer = 0 })
-    vim.keymap.set("n", "ga", "<cmd>Telescope lsp_code_actions<CR>", { buffer = 0 })
-    vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { buffer = 0 })
-    vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { buffer = 0 })
+    vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { buffer = 0 })
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
     vim.keymap.set("n", "<leader>cf", vim.lsp.buf.formatting, { buffer = 0 })
-    vim.keymap.set("n", "gl", "<cmd>Telescope diagnostics<CR>", { buffer = 0 })
+    vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { buffer = 0 })
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev , { buffer = 0 })
     vim.keymap.set("n", "]d", vim.diagnostic.goto_next , { buffer = 0 })
 end
@@ -25,4 +25,17 @@ end
 -- Enabled Language Servers
 require'lspconfig'.gopls.setup{
     on_attach = on_attach
+}
+
+require'lspconfig'.tsserver.setup{
+    on_attach = on_attach
+}
+
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.cssls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
 }
