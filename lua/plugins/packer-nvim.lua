@@ -74,10 +74,11 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lua'
+    use 'ThePrimeagen/harpoon'
     -- Language Specific Plugins
-    use 'leafOfTree/vim-svelte-plugin'
+    -- use 'leafOfTree/vim-svelte-plugin'
     -- use 'fatih/vim-go'
-    use 'dart-lang/dart-vim-plugin'
+    -- use 'dart-lang/dart-vim-plugin'
     -- use { 
     --   'akinsho/flutter-tools.nvim',
     --   requires = 'nvim-lua/plenary.nvim',

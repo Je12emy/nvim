@@ -20,5 +20,7 @@ require('plugins/comment')
 -- require('plugins/barbar')
 require('plugins/luasnip')
 require('plugins/nvim-dap')
--- For some reasong this does not work when set from the settings module
+require('plugins/harpoon')
+
+-- For some reason this does not work when set from the settings module
 vim.cmd[[set laststatus=3]]
