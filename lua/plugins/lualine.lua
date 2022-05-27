@@ -1,6 +1,5 @@
 local options = {
-      theme = 'gruvbox',
-      disabled_filetypes = {'NvimTree'},
+      theme = 'gruvbox-baby',
 }
 
 local sections = {

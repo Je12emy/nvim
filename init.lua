@@ -4,9 +4,9 @@
 -- General Options
 require('keymaps')
 require('settings')
-require('lsp')
--- Plugins
 require('plugins/packer-nvim')
+require('lsp')
+---- Plugins
 require('plugins/lualine')
 require('plugins/telescope')
 require('plugins/nvimtree')

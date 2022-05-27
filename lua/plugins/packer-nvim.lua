@@ -34,6 +34,7 @@ require('packer').startup(function()
         "catppuccin/nvim",
         as = "catppuccin"
     })
+    use 'luisiacc/gruvbox-baby'
     use 'gruvbox-community/gruvbox'
     -- Utils
     use 'tpope/vim-surround'
@@ -85,4 +86,4 @@ require('packer').startup(function()
     use 'vimwiki/vimwiki'
 end)
 
-vim.cmd[[colorscheme gruvbox]]
+vim.cmd[[colorscheme gruvbox-baby]]
