@@ -21,6 +21,6 @@ require('plugins/comment')
 require('plugins/luasnip')
 require('plugins/nvim-dap')
 require('plugins/harpoon')
-
+require('plugins/colorizer')
 -- For some reason this does not work when set from the settings module
 vim.cmd[[set laststatus=3]]

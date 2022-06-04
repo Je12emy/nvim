@@ -50,6 +50,7 @@ require('packer').startup(function()
     }
     use 'nvim-treesitter/playground'
     use 'nvim-lua/plenary.nvim'
+    use 'norcalli/nvim-colorizer.lua'
     -- Git
     use {
       'lewis6991/gitsigns.nvim',
