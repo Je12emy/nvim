@@ -80,19 +80,17 @@ require('packer').startup(function()
     use 'vimwiki/vimwiki'
 end)
 
--- Set my theme
-vim.cmd[[colorscheme kanagawa]]
-
 ---- Configurations
-require('plugins/lualine')
-require('plugins/telescope')
-require('plugins/nvimtree')
-require('plugins/vimwiki')
-require('plugins/lsp-kind')
-require('plugins/nvim-cmp')
-require('plugins/gitsigns')
-require('plugins/comment')
-require('plugins/luasnip')
-require('plugins/nvim-dap')
-require('plugins/harpoon')
 require('plugins/colorizer')
+require('plugins/comment')
+require('plugins/gitsigns')
+require('plugins/harpoon')
+require('plugins/kanagawa')
+require('plugins/lsp-kind')
+require('plugins/lualine')
+require('plugins/luasnip')
+require('plugins/nvim-cmp')
+require('plugins/nvim-dap')
+require('plugins/nvimtree')
+require('plugins/telescope')
+require('plugins/vimwiki')
