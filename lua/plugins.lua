@@ -45,6 +45,7 @@ require('packer').startup(function()
     use 'nvim-lua/plenary.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'ThePrimeagen/harpoon'
+    use 'sbdchd/neoformat'
 
     -- Git
     use {
@@ -89,6 +90,7 @@ require('plugins/kanagawa')
 require('plugins/lsp-kind')
 require('plugins/lualine')
 require('plugins/luasnip')
+require('plugins/neoformat')
 require('plugins/nvim-cmp')
 require('plugins/nvim-dap')
 require('plugins/nvimtree')
