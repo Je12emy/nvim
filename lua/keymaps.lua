@@ -1,7 +1,3 @@
--- ------------------------
--- -      Keymaps         -   
--- ------------------------
-
 -- General
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set("n", '<Space>', '<Nop>')

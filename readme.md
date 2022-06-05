@@ -4,6 +4,8 @@ A general basic neovim configuration written in Lua.
 
 ## TODO
 
-- [ ] Update filestructure
+- [x] Update filestructure
 - [ ] DAP
+    - [ ] Go config
+    - [ ] Rust config
 - [ ] Find my perfect dark theme

@@ -1,34 +1,34 @@
--- ------------------------
--- -      BOOTSTRAP       -   
--- ------------------------
-
+-- Bootstrap packer
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   vim.cmd 'packadd packer.nvim'
 end
--- ------------------------
--- -      PLUGINS         -   
--- ------------------------
+
+-- Plugins list
 require('packer').startup(function()
-  -- Packer can manage itself
+    -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    -- Tree Explorer
+    -- Tree Explorer, might just remove it soon
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons'
     }
     use 'airblade/vim-rooter'
     use 'kyazdani42/nvim-web-devicons'
+
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
     -- UI
     use "hoob3rt/lualine.nvim"
+
     -- Themes
     use 'rebelot/kanagawa.nvim'
+
     -- Utils
     use 'tpope/vim-surround'
     use 'numToStr/Comment.nvim'
@@ -45,6 +45,7 @@ require('packer').startup(function()
     use 'nvim-lua/plenary.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'ThePrimeagen/harpoon'
+
     -- Git
     use {
       'lewis6991/gitsigns.nvim',
@@ -53,13 +54,16 @@ require('packer').startup(function()
       },
     }
     use 'tpope/vim-fugitive'
+
     -- LSP
     use {
       'neovim/nvim-lspconfig', 
     }
+
     -- DAP
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'leoluz/nvim-dap-go'
+
     -- Completition + Snippets
     use 'onsails/lspkind-nvim'
     use 'L3MON4D3/LuaSnip'
@@ -69,9 +73,26 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lua'
+
     -- Language Specific Plugins
+
     -- Journaling
     use 'vimwiki/vimwiki'
 end)
 
+-- Set my theme
 vim.cmd[[colorscheme kanagawa]]
+
+---- Configurations
+require('plugins/lualine')
+require('plugins/telescope')
+require('plugins/nvimtree')
+require('plugins/vimwiki')
+require('plugins/lsp-kind')
+require('plugins/nvim-cmp')
+require('plugins/gitsigns')
+require('plugins/comment')
+require('plugins/luasnip')
+require('plugins/nvim-dap')
+require('plugins/harpoon')
+require('plugins/colorizer')
