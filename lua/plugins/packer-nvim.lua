@@ -21,8 +21,6 @@ require('packer').startup(function()
     }
     use 'airblade/vim-rooter'
     use 'kyazdani42/nvim-web-devicons'
-    -- Tab
-    -- use 'romgrk/barbar.nvim'
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-telescope/telescope.nvim'
@@ -30,12 +28,7 @@ require('packer').startup(function()
     -- UI
     use "hoob3rt/lualine.nvim"
     -- Themes
-    use({
-        "catppuccin/nvim",
-        as = "catppuccin"
-    })
-    use 'luisiacc/gruvbox-baby'
-    use 'gruvbox-community/gruvbox'
+    use 'rebelot/kanagawa.nvim'
     -- Utils
     use 'tpope/vim-surround'
     use 'numToStr/Comment.nvim'
@@ -51,6 +44,7 @@ require('packer').startup(function()
     use 'nvim-treesitter/playground'
     use 'nvim-lua/plenary.nvim'
     use 'norcalli/nvim-colorizer.lua'
+    use 'ThePrimeagen/harpoon'
     -- Git
     use {
       'lewis6991/gitsigns.nvim',
@@ -75,17 +69,9 @@ require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lua'
-    use 'ThePrimeagen/harpoon'
     -- Language Specific Plugins
-    -- use 'leafOfTree/vim-svelte-plugin'
-    -- use 'fatih/vim-go'
-    -- use 'dart-lang/dart-vim-plugin'
-    -- use { 
-    --   'akinsho/flutter-tools.nvim',
-    --   requires = 'nvim-lua/plenary.nvim',
-    -- }
     -- Journaling
     use 'vimwiki/vimwiki'
 end)
 
-vim.cmd[[colorscheme gruvbox-baby]]
+vim.cmd[[colorscheme kanagawa]]

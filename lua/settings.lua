@@ -29,3 +29,6 @@ o.timeoutlen = 3000
 set.cursorline = true
 set.wrapscan = true
 set.spelllang = {'en','es'}
+set.colorcolumn = '80'
+set.laststatus = 3
+set.winbar = '%=%m %f'

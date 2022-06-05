@@ -1,5 +1,5 @@
 local options = {
-      theme = 'gruvbox-baby',
+      theme = 'kanagawa',
 }
 
 local sections = {
